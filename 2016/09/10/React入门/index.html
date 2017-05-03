@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>HEXO+github,搭建属于自己的博客 | mover&#39;s blog</title>
+  <title>React入门 | mover&#39;s blog</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -197,62 +197,38 @@
         <div class="row col-md-offset-2">
             <div class="col-md-8">
     			<span class="post-meta">
-      <time datetime="2016-09-06T13:34:18.000Z" itemprop="datePublished">
-          2016-09-06
+      <time datetime="2016-09-10T13:27:12.000Z" itemprop="datePublished">
+          2016-09-10
       </time>
     
 </span>
-                <h1>HEXO+github,搭建属于自己的博客</h1>
+                <h1>React入门</h1>
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
-      		<p>hexo是一款基于Node.js的静态博客框架,hexo github链接,这篇教程是针对与Mac的.<br>之前是想着写博客，一方面是给自己做笔记，可以提升自己的写作、总结能力，一个技术点我们会使用，并不难，但是要做到让让别人也能听懂我们讲得，还是需要一定的技巧和经验的。很多类似于CSDN、博客园也都可以写文章，但是页面的样式我，不是太喜欢，简书还算好点得。最近看到一些大神们的博客,貌似都是用hexo写得,我也依葫芦画瓢的搭建了一个。不罗嗦了，直接上搭建步骤。</p>
-<p></p><h3>配置环境</h3><br>安装Node（必须）<p></p>
-<p>作用：用来生成静态页面的</p>
-<p>到Node.js官网下载相应平台的最新版本，一路安装即可。</p>
-<p>安装Git（必须）</p>
-<p>作用：把本地的hexo内容提交到github上去.</p>
-<p>安装Xcode就自带有Git，我就不多说了。</p>
-<p>申请GitHub（必须）</p>
-<p>作用：是用来做博客的远程创库、域名、服务器之类的，怎么与本地hexo建立连接等下讲。</p>
-<p>github账号我也不再啰嗦了,没有的话直接申请就行了，跟一般的注册账号差不多，SSH Keys，看你自己了，可以不配制，不配置的话以后每次对自己的博客有改动提交的时候就要手动输入账号密码，配置了就不需要了，怎么配置我就不多说了，网上有很多教程。</p>
-<p></p><h3>正式安装Hexo</h3><br>Node和Git都安装好后,首先创建一个文件夹,如blog,用户存放hexo的配置文件,然后进入blog里安装Hexo。<br>执行如下命令安装Hexo：(使用以下命令安装hexo(ps：以下命令中的$符号只为了让教程和实际看起来一致，实际输入命令只需输入$ 后面的命令即可)<br>进入blog文件夹内<br>$ npm install hexo-cli -g<p></p>
-<p>$ npm install hexo-deployer-git –save</p>
-<p>$ hexo g</p>
-<p>$ hexo d</p>
-<p>$ hexo init</p>
-<p>$ hexo g</p>
-<p>$ hexo s<br>然后用浏览器访问<a href="http://localhost:4000/，此时，你应该看到了一个漂亮的博客了，当然这个博客只是在本地的，别人是看不到的，hexo3.0使用的默认主题是landscape。轻轻松松就看到了一点成果，是不是很激动，这就是hexo的强大之处，这个本地预览的功能，我真是爱不释手" target="_blank" rel="external">http://localhost:4000/，此时，你应该看到了一个漂亮的博客了，当然这个博客只是在本地的，别人是看不到的，hexo3.0使用的默认主题是landscape。轻轻松松就看到了一点成果，是不是很激动，这就是hexo的强大之处，这个本地预览的功能，我真是爱不释手</a></p>
-<p></p><h3>配置Github</h3><br>建立Repository<br>建立与你用户名对应的仓库，仓库名必须为【your_user_name.github.io】，固定写法<p></p>
-<p>然后建立关联，blog是我之前建的东西也全在这里面，有：</p>
-<pre><code>_config.yml    node_modules    public      source
-
-db.json        package.json    scaffolds  themes
-</code></pre><p>现在我们需要_config.yml文件，来建立关联，进入blog下的_config.yml文件，打开文件，deploy:</p>
-<pre><code>type: git
-
-repo: https://github.com/your_user_name/your_user_name.github.io.git
-
-branch: master
-</code></pre><p>然后执行命令：</p>
-<p>$ npm install hexo-deployer-git –save<br>然后，执行配置命令：</p>
-<p>$ hexo deploy</p>
-<p>然后再浏览器中输入<a href="http://your_user_name.github.io/就行了" target="_blank" rel="external">http://your_user_name.github.io/就行了</a>.</p>
+      		<p></p><h3>前置知识</h3><br>1.JS，CSS基础<br>2.Sass，Compass<br>3.Yeoman，Grunt，Webpack<br>4.CommonJS，NodeJS<br>5.Git，Github<br><br><p></p>
+<p></p><h3>JSX</h3><br>JSX字面上的意思就是javascript和xml，是facebook为react 框架开发的一套语法糖。｛解析js的表达式｝需要解析库解析，最终被解析成JS。type为text/jsx。<p></p>
+<p>html只有个根元素，div id=”container”。</p>
+<p>css声明类名改为className，内联样式style＝｛｛color：‘red’｝｝。</p>
 
             <div class="clearfix"></div>
             <hr class="nogutter">
         </div>
         <nav class="pagination" role="pagination">
     
-    <a class="pull-left" href="/2016/09/08/前端面试题/" style="float: left;">
-        ← 前端面试题
+    <a class="pull-left" href="/2016/12/03/111/" style="float: left;">
+        ← QQ第三方登录
     </a>
     
+    
+    <a class="pull-right" href="/2016/09/08/前端面试题/">
+        前端面试题 →
+    </a>
     
 </nav>
 
         <div class="duoshuo">
-<div class="ds-thread" data-thread-key="2016/09/06/HEXO-github-搭建属于自己的博客/" data-title="HEXO+github,搭建属于自己的博客" data-url="http://yoursite.com/2016/09/06/HEXO-github-搭建属于自己的博客/"></div>
+<div class="ds-thread" data-thread-key="2016/09/10/React入门/" data-title="React入门" data-url="http://yoursite.com/2016/09/10/React入门/"></div>
 <script type="text/javascript">
 var duoshuoQuery = {short_name:"duoshuo"};
 (function() {
