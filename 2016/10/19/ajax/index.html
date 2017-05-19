@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>React入门 | mover&#39;s blog</title>
+  <title>ajax | mover&#39;s blog</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -197,38 +197,44 @@
         <div class="row col-md-offset-2">
             <div class="col-md-8">
     			<span class="post-meta">
-      <time datetime="2016-09-10T13:27:12.000Z" itemprop="datePublished">
-          2016-09-10
+      <time datetime="2016-10-19T12:18:54.000Z" itemprop="datePublished">
+          2016-10-19
       </time>
     
 </span>
-                <h1>React入门</h1>
+                <h1>ajax</h1>
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
-      		<p></p><h3>前置知识</h3><br>1.JS，CSS基础<br>2.Sass，Compass<br>3.Yeoman，Grunt，Webpack<br>4.CommonJS，NodeJS<br>5.Git，Github<br><br><p></p>
-<p></p><h3>JSX</h3><br>JSX字面上的意思就是javascript和xml，是facebook为react 框架开发的一套语法糖。｛解析js的表达式｝需要解析库解析，最终被解析成JS。type为text/jsx。<p></p>
-<p>html只有个根元素，div id=”container”。</p>
-<p>css声明类名改为className，内联样式style＝｛｛color：‘red’｝｝。</p>
+      		<p>在学习之前，您需要对下面的知识有基本的了解：<br>HTML / XHTML<br>CSS<br>JavaScript / DOM<br><br></p>
+<p></p><h4>什么是 AJAX ？</h4>AJAX = 异步 JavaScript 和 XML。<br>AJAX 是一种用于创建快速动态网页的技术。<br>通过在后台与服务器进行少量数据交换，AJAX 可以使网页实现异步更新。这意味着可以在不重新加载整个网页的情况下，对网页的某部分进行更新。<br>传统的网页（不使用 AJAX）如果需要更新内容，必需重载整个网页面。<br>有很多使用 AJAX 的应用程序案例：新浪微博、Google 地图、开心网等等。<br><br><p></p>
+<p></p><h4>创建 XMLHttpRequest 对象</h4>XMLHttpRequest 用于在后台与服务器交换数据。<p></p>
+<p>创建 XMLHttpRequest 对象的语法：<br>variable=new XMLHttpRequest();<br>老版本的 Internet Explorer （IE5 和 IE6）使用 ActiveX 对象：<br>variable=new ActiveXObject(“Microsoft.XMLHTTP”);</p>
+<p>var xmlhttp;<br>if (window.XMLHttpRequest)<br>  {// code for IE7+, Firefox, Chrome, Opera, Safari<br>  xmlhttp=new XMLHttpRequest();<br>  }<br>else<br>  {// code for IE6, IE5<br>  xmlhttp=new ActiveXObject(“Microsoft.XMLHTTP”);<br>  }<br>  <br><br>  </p><h4>向服务器发送请求</h4>如需将请求发送到服务器，我们使用 XMLHttpRequest 对象的 open() 和 send() 方法：<br>xmlhttp.open(“GET”,”test1.txt”,true);<br>xmlhttp.send();<br>方法    描述<br>open(method,url,async)<br>规定请求的类型、URL 以及是否异步处理请求。<br>method：请求的类型；GET 或 POST<br>url：文件在服务器上的位置<br>async：true（异步）或 false（同步）<br>send(string)<br>将请求发送到服务器。<br>string：仅用于 POST 请求<br><br><p></p>
+<p></p><h4>GET 还是 POST？</h4>与 POST 相比，GET 更简单也更快，并且在大部分情况下都能用。<br>然而，在以下情况中，请使用 POST 请求：<br>无法使用缓存文件（更新服务器上的文件或数据库）<br>向服务器发送大量数据（POST 没有数据量限制）<br>发送包含未知字符的用户输入时，POST 比 GET 更稳定也更可靠<br><br><p></p>
+<p></p><h4>为了缓存情况，请向 URL 添加一个唯一的 ID</h4>xmlhttp.open(“GET”,”demo_get.asp?t=” + Math.random(),true);<br>xmlhttp.send();<br>如果需要像 HTML 表单那样 POST 数据，请使用 setRequestHeader() 来添加 HTTP 头。然后在 send() 方法中规定您希望发送的数据：<br>xmlhttp.open(“POST”,”ajax_test.asp”,true);<br>xmlhttp.setRequestHeader(“Content-type”,”application/x-www-form-urlencoded”);<br>xmlhttp.send(“fname=Bill&amp;lname=Gates”);<br><br><p></p>
+<p></p><h4>onreadystatechange 事件</h4>    当请求被发送到服务器时，我们需要执行一些基于响应的任务。<br>每当 readyState 改变时，就会触发 onreadystatechange 事件。<br>readyState 属性存有 XMLHttpRequest 的状态信息。<br>onreadystatechange    存储函数（或函数名），每当 readyState 属性改变时，就会调用该函数。<br>readyState<br>存有 XMLHttpRequest 的状态。从 0 到 4 发生变化。<br>0: 请求未初始化<br>1: 服务器连接已建立<br>2: 请求已接收<br>3: 请求处理中<br>4: 请求已完成，且响应已就绪<br>status<br>200: “OK”<br>404: 未找到页面<p></p>
+<p>xmlhttp.onreadystatechange=function()<br>  {<br>  if (xmlhttp.readyState==4 &amp;&amp; xmlhttp.status==200)<br>    {<br>    document.getElementById(“myDiv”).innerHTML=xmlhttp.responseText;<br>    }<br>  }<br><br></p>
+<p></p><h4>完整的实例</h4><br>var xmlhttp;<br>function loadXMLDoc(url,cfunc)<br>{<br>if (window.XMLHttpRequest)<br>  {// code for IE7+, Firefox, Chrome, Opera, Safari<br>  xmlhttp=new XMLHttpRequest();<br>  }<br>else<br>  {// code for IE6, IE5<br>  xmlhttp=new ActiveXObject(“Microsoft.XMLHTTP”);<br>  }<br>xmlhttp.onreadystatechange=cfunc;<br>xmlhttp.open(“GET”,url,true);<br>xmlhttp.send();<br>}<br>function myFunction()<br>{<br>loadXMLDoc(“/ajax/test1.txt”,function()<br>  {<br>  if (xmlhttp.readyState==4 &amp;&amp; xmlhttp.status==200)<br>    {<br>    document.getElementById(“myDiv”).innerHTML=xmlhttp.responseText;<br>    }<br>  });<br>}<p></p>
 
             <div class="clearfix"></div>
             <hr class="nogutter">
         </div>
         <nav class="pagination" role="pagination">
     
-    <a class="pull-left" href="/2016/10/06/前端兼容性问题与解决/" style="float: left;">
-        ← 前端兼容性问题与解决
+    <a class="pull-left" href="/2016/12/03/111/" style="float: left;">
+        ← 在github上生成一个新的秘钥
     </a>
     
     
-    <a class="pull-right" href="/2016/09/08/前端面试题/">
-        前端面试题 →
+    <a class="pull-right" href="/2016/10/06/前端兼容性问题与解决/">
+        前端兼容性问题与解决 →
     </a>
     
 </nav>
 
         <div class="duoshuo">
-<div class="ds-thread" data-thread-key="2016/09/10/React入门/" data-title="React入门" data-url="http://yoursite.com/2016/09/10/React入门/"></div>
+<div class="ds-thread" data-thread-key="2016/10/19/ajax/" data-title="ajax" data-url="http://yoursite.com/2016/10/19/ajax/"></div>
 <script type="text/javascript">
 var duoshuoQuery = {short_name:"duoshuo"};
 (function() {
