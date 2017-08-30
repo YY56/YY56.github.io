@@ -1,406 +1,653 @@
 <!DOCTYPE html>
-<!--[if lte IE 8 ]>
-<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
-<![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!-->
-<!--
-***************  *      *     *
-      8          *    *       *
-      8          *  *         *
-      8          **           *
-      8          *  *         *
-      8          *    *       *
-      8          *      *     *
-      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
--->
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
-<!--<![endif]-->
-
-<head>
-  <title>Archives | mover&#39;s blog</title>
-  <!-- Meta data -->
-    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="generator" content="mover's blog">
-    <meta name="author" content="liu yahui">
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
-
-    <!-- Favicon, (keep icon in root folder) -->
-    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
-
-    <link rel="alternate" href="/atom.xml" title="mover&#39;s blog" type="application/atom+xml">
-    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
-	
-    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
-    
-    
-
-    <!-- Custom stylesheet, (add custom styles here, always load last) -->
-    <!-- Load our stylesheet for IE8 -->
-    <!--[if IE 8]>
-    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
-    <![endif]-->
-
-    <!-- Google Webfonts (Monserrat 400/700, Open Sans 400/600) -->
-    <link href='//fonts.useso.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-    <link href='//fonts.useso.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
-
-    <!-- Load our fonts individually if IE8+, to avoid faux bold & italic rendering -->
-    <!--[if IE]>
-    <link href='http://fonts.useso.com/css?family=Montserrat:400' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.useso.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.useso.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.useso.com/css?family=Open+Sans:600' rel='stylesheet' type='text/css'>
-    <![endif]-->
-
-    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
-    <script src="/js/jquery-1.11.1.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
-
-    <!-- Load these in the <head> for quicker IE8+ load times -->
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-    <script src="/js/html5shiv.min.js"></script>
-    <script src="/js/respond.min.js"></script>
-    <![endif]-->
-
-
-
-
-
-
-
-
-
-
-  
-  
-  
-
-  
-  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
-</head>
-
-<!--
-<body class="home-template">
--->
-<body id="index" class="lightnav animsition">
-
-      <!-- ============================ Off-canvas navigation =========================== -->
-
-    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
-        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
-            <img src="/img/close.png" alt="Close"/>
-        </div>
-        <!-- Lists in Slidebars -->
-        <ul class="sb-menu">
-            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
-            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
-            <!-- Dropdown Menu -->
-			 
-            <li>
-                <a class="sb-toggle-submenu">Works<span class="sb-caret"></span></a>
-                <ul class="sb-submenu">
-                    
-                        <li><a href="/" target="_BLANK" class="animsition-link">AAA</a></li>
-                    
-                        <li><a href="/atom.xml" target="_BLANK" class="animsition-link">BBB</a></li>
-                    
-                </ul>
-            </li>
-            
-            
-            
-            <li>
-                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
-                <ul class="sb-submenu">
-                    
-                    <li><a href="http://go.kieran.top/" class="animsition-link">Kieran</a></li>
-                    
-                    <li><a href="http://domain.com/" class="animsition-link">Name</a></li>
-                    
-                </ul>
-            </li>
-            
-        </ul>
-        <!-- Lists in Slidebars -->
-        <ul class="sb-menu secondary">
-            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
-            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
-        </ul>
-    </div>
-    
-    <!-- ============================ END Off-canvas navigation =========================== -->
-
-    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
-
-    <div id="sb-site">
-        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
-
-        <!-- ============================ Header & Logo bar =========================== -->
-
-        <div id="navigation" class="navbar navbar-fixed-top">
-            <div class="navbar-inner">
-                <div class="container">
-                    <!-- Nav logo -->
-                    <div class="logo">
-                        <a href="/" title="Logo" class="animsition-link">
-                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
-                        </a>
-                    </div>
-                    <!-- // Nav logo -->
-                    <!-- Info-bar -->
-                    <nav>
-                        <ul class="nav">
-                            <li><a href="/" class="animsition-link">mover's blog</a></li>
-                            <li class="nolink"><span>Always </span>Creative.</li>
-                            
-                            <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a></li>
-                            
-                            
-                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
-                            
-                            
-                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
-                            
-                            
-                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
-                            
-                            
-                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
-                            
-                            <li class="nolink"><span>Welcome!</span></li>
-                        </ul>
-                    </nav>
-                    <!--// Info-bar -->
-                </div>
-                <!-- // .container -->
-                <div class="learnmore sb-toggle-right">More</div>
-                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar before"></span>
-                <span class="icon-bar main"></span>
-                <span class="icon-bar after"></span>
-                </button>
-            </div>
-            <!-- // .navbar-inner -->
-        </div>
-
-        <!-- ============================ Header & Logo bar =========================== -->
-
-
-      <!-- ============================ Hero Image =========================== -->
-
-<section id="hero" class="scrollme">
-    <div class="container-fluid element-img" style="background: url(/img/bg_img.jpg) no-repeat center center fixed;background-size: cover">
-        <div class="row">
-            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
-                <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
-                    <div>
-                        
-                        <h2>YOU'VE MADE A <span>BRAVE</span> DECISION, WELCOME.</h2>
-                        <p></p>
-                        
-                        <h2></h2>
-                        <p></p>
-                        
-
-                    </div>
-                </div>
-            </div>
-            <!-- // .col-md-12 -->
-        </div>
-        <div class="herofade beige-dk"></div>
-    </div>
-</section>
-
-<!-- Height spacing helper -->
-<div class="heightblock"></div>
-<!-- // End height spacing helper -->
-
-<!-- ============================ END Hero Image =========================== -->
-
-
-
-
-<section id="services">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="row boxes">
-                    
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2017/08/30/Js-引擎的LHS、RHS查询/">Js 引擎的LHS、RHS查询</a></h4>
-                            
-                            <p><time datetime="2017-08-30T03:47:48.000Z"><a href="/2017/08/30/Js-引擎的LHS、RHS查询/">2017-08-30</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2017/01/04/putingithub/">上传到github仓库，并在线浏览网页</a></h4>
-                            
-                            <p><time datetime="2017-01-04T08:36:27.000Z"><a href="/2017/01/04/putingithub/">2017-01-04</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2016/12/03/111/">在github上生成一个新的秘钥</a></h4>
-                            
-                            <p><time datetime="2016-12-03T07:03:02.000Z"><a href="/2016/12/03/111/">2016-12-03</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2016/11/21/js闭包原理及其应用/">js闭包原理及其应用</a></h4>
-                            
-                            <p><time datetime="2016-11-21T06:40:54.000Z"><a href="/2016/11/21/js闭包原理及其应用/">2016-11-21</a></time></p>
-                        </div>
-                    
-                        
-                            </div><div class="row boxes">
-                            
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2016/10/19/ajax/">ajax</a></h4>
-                            
-                            <p><time datetime="2016-10-19T12:18:54.000Z"><a href="/2016/10/19/ajax/">2016-10-19</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2016/10/06/前端兼容性问题与解决/">前端兼容性问题与解决</a></h4>
-                            
-                            <p><time datetime="2016-10-06T01:05:55.000Z"><a href="/2016/10/06/前端兼容性问题与解决/">2016-10-06</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2016/09/10/React入门/">React入门</a></h4>
-                            
-                            <p><time datetime="2016-09-10T13:27:12.000Z"><a href="/2016/09/10/React入门/">2016-09-10</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2016/09/08/前端面试题/">前端面试题</a></h4>
-                            
-                            <p><time datetime="2016-09-08T01:56:00.000Z"><a href="/2016/09/08/前端面试题/">2016-09-08</a></time></p>
-                        </div>
-                    
-                        
-                            </div><div class="row boxes">
-                            
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2016/09/06/HEXO-github-搭建属于自己的博客/">HEXO+github,搭建属于自己的博客</a></h4>
-                            
-                            <p><time datetime="2016-09-06T13:34:18.000Z"><a href="/2016/09/06/HEXO-github-搭建属于自己的博客/">2016-09-06</a></time></p>
-                        </div>
-                    
-                </div>
-            </div>    
-        </div>
-    </div>
-</section> 
-
-<section id="statement">
-    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
-        <div class="row">
-            <p>虽然还没想好写点什么，但是总觉得这里放句话比较和谐。</p>
-        </div>
-    </div>
-</section>
-      
-<!-- ============================ Footer =========================== -->
-
-<footer>
-    <div class="container">
-            <div class="copy">
-                <p>
-                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By liu yahui. All Rights Reserved.
-                </p>
-                <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
-            </div>
-            <div class="social">
-                <ul>
-                    
-                    <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
-                    
-                    
-                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
-                    
-                    
-                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
-                    
-                    
-                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
-                    
-                    
-                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
-                    
-                </ul>
-            </div>
-            <div class="clearfix"> </div>
-        </div>
-</footer>
-
-<!-- ============================ END Footer =========================== -->
-      <!-- Load our scripts -->
+<html>
+    <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
+    <title>
         
-<!-- Resizable 'on-demand' full-height hero -->
-<script type="text/javascript">
+        fi3ework&#39;s Studio
+        
+    </title>
+    <link rel="icon" href= /assests/favicon.ico>
+    <!-- 提前加载place holder  -->
+    <style>
+        @font-face {
+            font-family: 'Oswald-Regular';
+            src: url('/font/Oswald-Regular.ttf');
+        }
+        @font-face {
+            font-family: 'Source Sans Pro';
+            src: url('/font/Source Sans Pro.woff'),
+            url('/font/Source Sans Pro.woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Source Code Pro';
+            src: url('/font/SourceCodePro-Regular.ttf.woff'),
+            url('/font/SourceCodePro-Regular.ttf.woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        
+        .site-intro-placeholder {
+        position: absolute;
+        z-index: -2;
+        top: 0;
+        left: 0px;
+        width: calc(100% + 300px);
+        height: 100%;
+        background: repeating-linear-gradient(-45deg, #444 0, #444 80px, #333 80px, #333 160px);
+        background-position: center center;
+        transform: translate3d(-226px, 0, 0);
+        animation: gradient-move 2s ease-out 0s 1;
+        }
+        @keyframes gradient-move {
+        0% {
+            transform: translate3d(-226px, 0, 0);
+        }
+        99% {
+            transform: translate3d(0, 0, 0);
+        }
+        99.1% {
+            transform: translate3d(-226px, 0, 0);
+        }
+        100% {
+            transform: translate3d(-226px, 0, 0);
+        }
+    }
+    </style>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="//cdn.staticfile.org/jquery/3.2.1/jquery.min.js" defer></script>
     
-    var resizeHero = function () {
-        var hero = $(".cover,.heightblock"),
-            window1 = $(window);
-        hero.css({
-            "height": window1.height()
-        });
-    };
+    <script src="/scripts/main.js" defer></script>
+    <!-- 百度统计  -->
     
-    resizeHero();
+    <!-- 谷歌统计  -->
     
-    $(window).resize(function () {
-        resizeHero();
-    });
-</script>
-<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
-<script src="/js/jquery.flexslider-min.js"></script><!-- Flexslider plugin -->
-<script src="/js/scripts.js"></script><!-- Theme scripts -->
+</head>
+    
+        <body class="four-zero-four-body">
+    
+    
+<header class="header">
 
-<!-- Initiate flexslider plugin -->
-<script type="text/javascript">
-    $(document).ready(function($) {
-      $('.flexslider').flexslider({
-        animation: "fade",
-        prevText: "",
-        nextText: "",
-        directionNav: true
-      });
-    });
-</script>
+    <div class="header-sidebar-menu">&#xe775;</div>
+    <!-- post页的toggle banner  -->
+    
+    <a class="home-link" href=/>fi3ework's Studio.</a>
+</header>
+    <div class="wrapper">
+        <div class="site-intro">
+    
+    <!-- 主页  -->
+    
+    
+    
+    <div class="site-intro-img" style="background-image: url(http://oumn0o088.bkt.clouddn.com/404.jpg)"></div>
+    <div class="site-intro-placeholder"></div>
+    <div class="site-intro-meta">
+        <!-- 标题  -->
+        <h1 class="intro-title">
+            <!-- 主页  -->
+            
+            [404]
+            
+        </h1>
+        <!-- 副标题 -->
+        <p class="intro-subtitle">
+            <!-- 主页副标题  -->
+            
+            <p class="intro-subtitle"> </p>
+        
+        <!-- 文章页meta -->
+        
+    </div>
+</div>
+        <div class="container">
+            <main class="main index-page">
+    
+    
+    
+        <article class="index-post">
+            <a class="content-show-full" href = "/2017/08/30/404/" >
+                    <h2 class="abstract-title">
+                        
+                        <span>[404]</span>
+                    </h2>
+                <div class="abstract-content">
+                    
+                </div>
+            </a>
+            <div class="abstract-post-meta">
+                <!-- tags  -->
+                
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2017/08/30</span>
+                </div>
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
+            <a class="content-show-full" href = "/2017/08/30/Js-引擎的LHS、RHS查询/" >
+                    <h2 class="abstract-title">
+                        
+                        <span>Js 引擎的LHS、RHS查询</span>
+                    </h2>
+                <div class="abstract-content">
+                    
+版权声明：本文为博主原创文章，未经博主允许不得转载。
 
-</body>
+在写 js 代码的时候，编译器在编译的时候生成了代码，引擎执行它时，会通过查找变量 a 来判断它是否已经声明过。查找的过程中需要通过作用域来协助，这时候引擎会为变量 a 进行 LHS 查询，另一种查询类型是 RHS 查询。及当变量出现在 “=” 的左侧的时进行 LHS 查询，出现在右侧时进行  RHS 查询。讲的更好理解一点，LHS 查询出来的是变量的地址，而 RHS 查询出来的是变量存储的值。
+function foo(a){
+    console.log(a)
+}
+foo(2)
+让我们把上面的代码处理成一段对话，来让我更加容...
+                </div>
+            </a>
+            <div class="abstract-post-meta">
+                <!-- tags  -->
+                
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2017/08/30</span>
+                </div>
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
+            <a class="content-show-full" href = "/2017/01/04/putingithub/" >
+                    <h2 class="abstract-title">
+                        
+                        <span>上传到github仓库，并在线浏览网页</span>
+                    </h2>
+                <div class="abstract-content">
+                    首先准备好你需要上传的文件夹，里面有你写好的index.html文件js和css文件等在账号下创建一个仓库，名字为timer来到你的目录下，我的是intro
+此时已经进入文件夹，输入git add index.htmlgit add style.cssgit add render.jsgit commit -m “first commit”
+git remote add origin git@github.com:yourname/intro.git git push -u origin master
+之后显示Counting objects: 4, done.Delta compres...
+                </div>
+            </a>
+            <div class="abstract-post-meta">
+                <!-- tags  -->
+                
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2017/01/04</span>
+                </div>
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
+            <a class="content-show-full" href = "/2016/12/03/111/" >
+                    <h2 class="abstract-title">
+                        
+                        <span>在github上生成一个新的秘钥</span>
+                    </h2>
+                <div class="abstract-content">
+                    先前条件是你要有一个github账号，条件有了我们就可以开始了
+~ ssh-keygen -t rsa -C “your-email”然后就一直回车，直到显示The key’s randomart image is:
+此时会生成两个文件   .ssh/id_rsa和.ssh/id_rsa.pub然后就是进入.ssh/id_rsa.pub文件获取密码了~ more id_rsa.pub
+复制密码到网页
+新建一个秘钥，输入随意的title，粘贴秘钥即可
+ps:一个账号可有肯多个秘钥
+欢迎来到我的博客！
+
+                </div>
+            </a>
+            <div class="abstract-post-meta">
+                <!-- tags  -->
+                
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2016/12/03</span>
+                </div>
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
+            <a class="content-show-full" href = "/2016/11/21/js闭包原理及其应用/" >
+                    <h2 class="abstract-title">
+                        
+                        <span>js闭包原理及其应用</span>
+                    </h2>
+                <div class="abstract-content">
+                    
+                </div>
+            </a>
+            <div class="abstract-post-meta">
+                <!-- tags  -->
+                
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2016/11/21</span>
+                </div>
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
+            <a class="content-show-full" href = "/2016/10/19/ajax/" >
+                    <h2 class="abstract-title">
+                        
+                        <span>ajax</span>
+                    </h2>
+                <div class="abstract-content">
+                    在学习之前，您需要对下面的知识有基本的了解：HTML / XHTMLCSSJavaScript / DOM
+什么是 AJAX ？AJAX = 异步 JavaScript 和 XML。AJAX 是一种用于创建快速动态网页的技术。通过在后台与服务器进行少量数据交换，AJAX 可以使网页实现异步更新。这意味着可以在不重新加载整个网页的情况下，对网页的某部分进行更新。传统的网页（不使用 AJAX）如果需要更新内容，必需重载整个网页面。有很多使用 AJAX 的应用程序案例：新浪微博、Google 地图、开心网等等。
+创建 XMLHttpRequest 对象XMLHttpRequest 用于在后台与...
+                </div>
+            </a>
+            <div class="abstract-post-meta">
+                <!-- tags  -->
+                
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2016/10/19</span>
+                </div>
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
+            <a class="content-show-full" href = "/2016/10/06/前端兼容性问题与解决/" >
+                    <h2 class="abstract-title">
+                        
+                        <span>前端兼容性问题与解决</span>
+                    </h2>
+                <div class="abstract-content">
+                    css
+1.ie浮动产生的双倍距离
+给浮动的元素设置 display：inline-block
+
+4.浏览器的默认的css各有不同，解决办法
+设置css的初始样式reset，统一规定
+
+3.背景透明问题
+ie:filter:alpha(opacity=0.2)FF: opacity:0.6;
+
+4.min-height最小高度的实现（兼容IE6、IE7、FF）
+height:auto;min-height:100px;
+
+5.Box阴影(CSS3)
+    .box { box-shadow: 5px 5px 5px #666;    -moz-box-shadow: 5px 5px 5...
+                </div>
+            </a>
+            <div class="abstract-post-meta">
+                <!-- tags  -->
+                
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2016/10/06</span>
+                </div>
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
+            <a class="content-show-full" href = "/2016/09/10/React入门/" >
+                    <h2 class="abstract-title">
+                        
+                        <span>React入门</span>
+                    </h2>
+                <div class="abstract-content">
+                    前置知识1.JS，CSS基础2.Sass，Compass3.Yeoman，Grunt，Webpack4.CommonJS，NodeJS5.Git，Github
+JSXJSX字面上的意思就是javascript和xml，是facebook为react 框架开发的一套语法糖。｛解析js的表达式｝需要解析库解析，最终被解析成JS。type为text/jsx。
+html只有个根元素，div id=”container”。
+css声明类名改为className，内联样式style＝｛｛color：‘red’｝｝。
+
+                </div>
+            </a>
+            <div class="abstract-post-meta">
+                <!-- tags  -->
+                
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2016/09/10</span>
+                </div>
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
+            <a class="content-show-full" href = "/2016/09/08/前端面试题/" >
+                    <h2 class="abstract-title">
+                        
+                        <span>前端面试题</span>
+                    </h2>
+                <div class="abstract-content">
+                    HTML+CSS
+1.Doctype作用? 严格模式与混杂模式如何区分？它们有何意义?&lt;!DOCTYPE&gt; 声明位于文档中的最前面，处于标签之前。告知浏览器以何种模式来渲染文档。严格模式的排版和 JS 运作模式是 以该浏览器支持的最高标准运行。在混杂模式中，页面以宽松的向后兼容的方式显示。模拟老式浏览器的行为以防止站点无法工作。DOCTYPE不存在或格式不正确会导致文档以混杂模式呈现。
+2.HTML与XHTML——二者有什么区别所有的标记都必须要有一个相应的结束标记所有标签的元素和属性的名字都必须使用小写所有的XML标记都必须合理嵌套所有的属性必须用引号””括起来把所有&lt...
+                </div>
+            </a>
+            <div class="abstract-post-meta">
+                <!-- tags  -->
+                
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2016/09/08</span>
+                </div>
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
+            <a class="content-show-full" href = "/2016/09/06/HEXO-github-搭建属于自己的博客/" >
+                    <h2 class="abstract-title">
+                        
+                        <span>HEXO+github,搭建属于自己的博客</span>
+                    </h2>
+                <div class="abstract-content">
+                    hexo是一款基于Node.js的静态博客框架,hexo github链接,这篇教程是针对与Mac的.之前是想着写博客，一方面是给自己做笔记，可以提升自己的写作、总结能力，一个技术点我们会使用，并不难，但是要做到让让别人也能听懂我们讲得，还是需要一定的技巧和经验的。很多类似于CSDN、博客园也都可以写文章，但是页面的样式我，不是太喜欢，简书还算好点得。最近看到一些大神们的博客,貌似都是用hexo写得,我也依葫芦画瓢的搭建了一个。不罗嗦了，直接上搭建步骤。
+配置环境安装Node（必须）
+作用：用来生成静态页面的
+到Node.js官网下载相应平台的最新版本，一路安装即可。
+安装Git（必须）...
+                </div>
+            </a>
+            <div class="abstract-post-meta">
+                <!-- tags  -->
+                
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2016/09/06</span>
+                </div>
+            </div>
+        </article>
+    
+    <!-- paginator  -->
+    
+</main>
+            <!-- profile -->
+            
+        </div>
+        <footer class="footer">
+    <!-- social  -->
+    
+    <div class="social">
+        
+    
+        
+            
+                <a href="emailto:12345@qq.com" class="iconfont-archer email" title=email ></a>
+            
+        
+    
+        
+            
+                <a href="//github.com/fi3ework" class="iconfont-archer github" target="_blank" title="github"></a>
+            
+        
+    
+        
+    
+
+    </div>
+    
+    <!-- powered by Hexo  -->
+    <div class="copyright">
+        <span id="hexo-power">Powered by <a href="https://hexo.io/" target="_blank">Hexo</a></span><span class="iconfont-archer power">&#xe635;</span>
+        <span
+            id="theme-info">Theme <a href="https://github.com/fi3ework/hexo-theme-archer" target="_blank">archer</a></span>
+    </div>
+    <!-- 不蒜子  -->
+    
+</footer>
+    </div>
+    <div class="back-top">&#xe639;</div>
+    <div class="sidebar">
+    <div class="sidebar-header">
+        <div class="sidebar-category">
+            <span class="sidebar-archive-link"><span class="iconfont-archer">&#xe67d;</span>Archive</span>
+            <span class="sidebar-tags-link"><span class="iconfont-archer">&#xe610;</span>Tag</span>
+        </div>
+    </div>
+    <div class="sidebar-content sidebar-content-show-archive">
+          <div class="sidebar-archive">
+    <!-- 在ejs中将archive按照时间排序 -->
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="total-archive"> Total : 10 </div>
+    
+    <div class="post-archive">
+    
+    
+    
+    
+    <div class="archive-year"> 2017 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/30</span><a class="archive-post-title" href= "/2017/08/30/404/" >[404]</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/30</span><a class="archive-post-title" href= "/2017/08/30/Js-引擎的LHS、RHS查询/" >Js 引擎的LHS、RHS查询</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/04</span><a class="archive-post-title" href= "/2017/01/04/putingithub/" >上传到github仓库，并在线浏览网页</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> 2016 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">12/03</span><a class="archive-post-title" href= "/2016/12/03/111/" >在github上生成一个新的秘钥</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/21</span><a class="archive-post-title" href= "/2016/11/21/js闭包原理及其应用/" >js闭包原理及其应用</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/19</span><a class="archive-post-title" href= "/2016/10/19/ajax/" >ajax</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/06</span><a class="archive-post-title" href= "/2016/10/06/前端兼容性问题与解决/" >前端兼容性问题与解决</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/10</span><a class="archive-post-title" href= "/2016/09/10/React入门/" >React入门</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/08</span><a class="archive-post-title" href= "/2016/09/08/前端面试题/" >前端面试题</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/06</span><a class="archive-post-title" href= "/2016/09/06/HEXO-github-搭建属于自己的博客/" >HEXO+github,搭建属于自己的博客</a>
+        </li>
+    
+    </div>
+  </div>
+        <div class="sidebar-tags">
+    <div class="sidebar-tags-name">
+    
+    </div>
+    <div class="tag-load-fail" style="display: none; color: #ccc; font-size: 0.6rem;">
+    缺失模块。<br/>
+    1、请确保node版本大于6.2<br/>
+    2、在博客根目录（注意不是archer根目录）执行以下命令：<br/>
+    <span style="color: #f75357; font-size: 1rem; line-height: 2rem;">npm i hexo-generator-json-content --save</span><br/>
+    3、在根目录_config.yml里添加配置：
+    <pre style="color: #888; font-size: 0.6rem;">
+jsonContent:
+  meta: false
+  pages: false
+  posts:
+    title: true
+    date: true
+    path: true
+    text: false
+    raw: false
+    content: false
+    slug: false
+    updated: false
+    comments: false
+    link: false
+    permalink: false
+    excerpt: false
+    categories: false
+    tags: true</pre>
+    </div> 
+    <div class="sidebar-tag-list"></div>
+</div>
+    </div>
+</div> 
+    <script>
+    var jsInfo = {
+        root: '/'
+    }
+</script>
+    <!-- 不蒜子  -->
+    
+    <!-- CNZZ统计  -->
+    
+    </div>
+    </body>
 </html>
+
+
