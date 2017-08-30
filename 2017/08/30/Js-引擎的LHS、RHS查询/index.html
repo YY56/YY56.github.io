@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>在github上生成一个新的秘钥 | mover&#39;s blog</title>
+  <title>mover&#39;s blog</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -197,41 +197,56 @@
         <div class="row col-md-offset-2">
             <div class="col-md-8">
     			<span class="post-meta">
-      <time datetime="2016-12-03T07:03:02.000Z" itemprop="datePublished">
-          2016-12-03
+      <time datetime="2017-08-30T03:47:48.000Z" itemprop="datePublished">
+          2017-08-30
       </time>
     
 </span>
-                <h1>在github上生成一个新的秘钥</h1>
+                <h1></h1>
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
-      		<p>先前条件是你要有一个github账号，条件有了我们就可以开始了</p>
-<p>~ ssh-keygen -t rsa -C “your-email”<br>然后就一直回车，直到显示The key’s randomart image is:</p>
-<p>此时会生成两个文件   .ssh/id_rsa和.ssh/id_rsa.pub<br>然后就是进入.ssh/id_rsa.pub文件获取密码了<br>~ more id_rsa.pub</p>
-<p>复制密码到网页<br><img src="../images/key.jpg" alt=""></p>
-<p>新建一个秘钥，输入随意的title，粘贴秘钥即可</p>
-<p>ps:一个账号可有肯多个秘钥</p>
-<p>欢迎来到我的博客！</p>
+      		<h1 id="Js-引擎的LHS、RHS查询"><a href="#Js-引擎的LHS、RHS查询" class="headerlink" title="Js 引擎的LHS、RHS查询"></a>Js 引擎的LHS、RHS查询</h1><p>2017年8月30日 上午11:53</p>
+<blockquote>
+<p>版权声明：本文为博主原创文章，未经博主允许不得转载。</p>
+</blockquote>
+<p>在写 <strong>js</strong> 代码的时候，编译器在编译的时候生成了代码，引擎执行它时，会通过查找变量 <strong>a</strong> 来判断它是否已经声明过。查找的过程中需要通过作用域来协助，这时候引擎会为变量 <strong>a</strong> 进行 <strong>LHS</strong> 查询，另一种查询类型是 <strong>RHS</strong> 查询。及当变量出现在 “<strong>=</strong>” 的左侧的时进行 <strong>LHS</strong> 查询，出现在右侧时进行  <strong>RHS</strong> 查询。讲的更好理解一点，<strong>LHS</strong> 查询出来的是变量的地址，而 <strong>RHS</strong> 查询出来的是变量存储的值。</p>
+<pre><code>function foo(a){
+    console.log(a)
+}
+foo(2)
+</code></pre><p>让我们把上面的代码处理成一段对话，来让我更加容易的去理解：</p>
+<blockquote>
+<p>来自《你不知道的JavaScript》</p>
+<p>引擎：我需要对<code>foo</code>进行<strong>RHS</strong>引用，你见过它吗？</p>
+<p>作用域：别说，我还真见过，编译器那小子刚刚才编译了他，它是一个函数，给你。</p>
+<p>引擎：哥们太够意思了！好吧，我来执行一下<code>foo</code>。</p>
+<p>引擎：作用域，还有个事儿，我需要对<code>a</code>进行<strong>LHS</strong>引用，这个你见过吗？</p>
+<p>作用域：这个也见过，编译器最近把它声明为<code>foo</code>的一个形式参数，拿去吧。</p>
+<p>引擎：大恩不言谢啊，你总是那么棒，现在我要把<code>2</code>赋值给<code>a</code>。</p>
+<p>引擎：哥们，不好意思，我又来了打扰你了。我要对<code>console</code>进行<strong>RHS</strong>引用，你见过它吗？</p>
+<p>作用域：咱俩谁跟谁啊，再说我就是干这个，这个我也有，<code>console</code>是个内置对象，给你。</p>
+<p>引擎：么么哒。我得看看这里面是不是有<code>log(···)</code>，太好了，找到了，是个函数。</p>
+<p>引擎：哥们，你能在帮我找找对<code>a</code>的<strong>RHS</strong>引用吗？虽然我记得它，但是我想再确认一下。</p>
+<p>作用域：放心吧，这个变量没有动过，拿走，不谢。</p>
+<p>引擎：真棒！我来把<code>a</code>的值，也就是<code>2</code>传递进<code>log(..)</code></p>
+<p>······</p>
+</blockquote>
 
             <div class="clearfix"></div>
             <hr class="nogutter">
         </div>
         <nav class="pagination" role="pagination">
     
-    <a class="pull-left" href="/2017/01/04/putingithub/" style="float: left;">
-        ← 上传到github仓库，并在线浏览网页
-    </a>
     
-    
-    <a class="pull-right" href="/2016/11/21/js闭包原理及其应用/">
-        js闭包原理及其应用 →
+    <a class="pull-right" href="/2017/01/04/putingithub/">
+        上传到github仓库，并在线浏览网页 →
     </a>
     
 </nav>
 
         <div class="duoshuo">
-<div class="ds-thread" data-thread-key="2016/12/03/111/" data-title="在github上生成一个新的秘钥" data-url="http://yoursite.com/2016/12/03/111/"></div>
+<div class="ds-thread" data-thread-key="2017/08/30/Js-引擎的LHS、RHS查询/" data-title="" data-url="http://yoursite.com/2017/08/30/Js-引擎的LHS、RHS查询/"></div>
 <script type="text/javascript">
 var duoshuoQuery = {short_name:"duoshuo"};
 (function() {
