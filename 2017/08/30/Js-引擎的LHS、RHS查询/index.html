@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>mover&#39;s blog</title>
+  <title>Js 引擎的LHS、RHS查询 | mover&#39;s blog</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -202,12 +202,11 @@
       </time>
     
 </span>
-                <h1></h1>
+                <h1>Js 引擎的LHS、RHS查询</h1>
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
-      		<h1 id="Js-引擎的LHS、RHS查询"><a href="#Js-引擎的LHS、RHS查询" class="headerlink" title="Js 引擎的LHS、RHS查询"></a>Js 引擎的LHS、RHS查询</h1><p>2017年8月30日 上午11:53</p>
-<blockquote>
+      		<blockquote>
 <p>版权声明：本文为博主原创文章，未经博主允许不得转载。</p>
 </blockquote>
 <p>在写 <strong>js</strong> 代码的时候，编译器在编译的时候生成了代码，引擎执行它时，会通过查找变量 <strong>a</strong> 来判断它是否已经声明过。查找的过程中需要通过作用域来协助，这时候引擎会为变量 <strong>a</strong> 进行 <strong>LHS</strong> 查询，另一种查询类型是 <strong>RHS</strong> 查询。及当变量出现在 “<strong>=</strong>” 的左侧的时进行 <strong>LHS</strong> 查询，出现在右侧时进行  <strong>RHS</strong> 查询。讲的更好理解一点，<strong>LHS</strong> 查询出来的是变量的地址，而 <strong>RHS</strong> 查询出来的是变量存储的值。</p>
@@ -218,6 +217,7 @@ foo(2)
 </code></pre><p>让我们把上面的代码处理成一段对话，来让我更加容易的去理解：</p>
 <blockquote>
 <p>来自《你不知道的JavaScript》</p>
+</blockquote>
 <p>引擎：我需要对<code>foo</code>进行<strong>RHS</strong>引用，你见过它吗？</p>
 <p>作用域：别说，我还真见过，编译器那小子刚刚才编译了他，它是一个函数，给你。</p>
 <p>引擎：哥们太够意思了！好吧，我来执行一下<code>foo</code>。</p>
@@ -231,7 +231,6 @@ foo(2)
 <p>作用域：放心吧，这个变量没有动过，拿走，不谢。</p>
 <p>引擎：真棒！我来把<code>a</code>的值，也就是<code>2</code>传递进<code>log(..)</code></p>
 <p>······</p>
-</blockquote>
 
             <div class="clearfix"></div>
             <hr class="nogutter">
@@ -246,7 +245,7 @@ foo(2)
 </nav>
 
         <div class="duoshuo">
-<div class="ds-thread" data-thread-key="2017/08/30/Js-引擎的LHS、RHS查询/" data-title="" data-url="http://yoursite.com/2017/08/30/Js-引擎的LHS、RHS查询/"></div>
+<div class="ds-thread" data-thread-key="2017/08/30/Js-引擎的LHS、RHS查询/" data-title="Js 引擎的LHS、RHS查询" data-url="http://yoursite.com/2017/08/30/Js-引擎的LHS、RHS查询/"></div>
 <script type="text/javascript">
 var duoshuoQuery = {short_name:"duoshuo"};
 (function() {
