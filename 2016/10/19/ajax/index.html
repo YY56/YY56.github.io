@@ -138,17 +138,47 @@
         <div class="container">
             <main class="main post-page">
     <article class="article-entry">
-        <p>在学习之前，您需要对下面的知识有基本的了解：<br>HTML / XHTML<br>CSS<br>JavaScript / DOM<br><br></p>
-<p></p><h4>什么是 AJAX ？</h4>AJAX = 异步 JavaScript 和 XML。<br>AJAX 是一种用于创建快速动态网页的技术。<br>通过在后台与服务器进行少量数据交换，AJAX 可以使网页实现异步更新。这意味着可以在不重新加载整个网页的情况下，对网页的某部分进行更新。<br>传统的网页（不使用 AJAX）如果需要更新内容，必需重载整个网页面。<br>有很多使用 AJAX 的应用程序案例：新浪微博、Google 地图、开心网等等。<br><br><p></p>
-<p></p><h4>创建 XMLHttpRequest 对象</h4>XMLHttpRequest 用于在后台与服务器交换数据。<p></p>
-<p>创建 XMLHttpRequest 对象的语法：<br>variable=new XMLHttpRequest();<br>老版本的 Internet Explorer （IE5 和 IE6）使用 ActiveX 对象：<br>variable=new ActiveXObject(“Microsoft.XMLHTTP”);</p>
-<p>var xmlhttp;<br>if (window.XMLHttpRequest)<br>  {// code for IE7+, Firefox, Chrome, Opera, Safari<br>  xmlhttp=new XMLHttpRequest();<br>  }<br>else<br>  {// code for IE6, IE5<br>  xmlhttp=new ActiveXObject(“Microsoft.XMLHTTP”);<br>  }<br>  <br><br>  </p><h4>向服务器发送请求</h4>如需将请求发送到服务器，我们使用 XMLHttpRequest 对象的 open() 和 send() 方法：<br>xmlhttp.open(“GET”,”test1.txt”,true);<br>xmlhttp.send();<br>方法    描述<br>open(method,url,async)<br>规定请求的类型、URL 以及是否异步处理请求。<br>method：请求的类型；GET 或 POST<br>url：文件在服务器上的位置<br>async：true（异步）或 false（同步）<br>send(string)<br>将请求发送到服务器。<br>string：仅用于 POST 请求<br><br><p></p>
-<p></p><h4>GET 还是 POST？</h4>与 POST 相比，GET 更简单也更快，并且在大部分情况下都能用。<br>然而，在以下情况中，请使用 POST 请求：<br>无法使用缓存文件（更新服务器上的文件或数据库）<br>向服务器发送大量数据（POST 没有数据量限制）<br>发送包含未知字符的用户输入时，POST 比 GET 更稳定也更可靠<br><br><p></p>
-<p></p><h4>为了缓存情况，请向 URL 添加一个唯一的 ID</h4>xmlhttp.open(“GET”,”demo_get.asp?t=” + Math.random(),true);<br>xmlhttp.send();<br>如果需要像 HTML 表单那样 POST 数据，请使用 setRequestHeader() 来添加 HTTP 头。然后在 send() 方法中规定您希望发送的数据：<br>xmlhttp.open(“POST”,”ajax_test.asp”,true);<br>xmlhttp.setRequestHeader(“Content-type”,”application/x-www-form-urlencoded”);<br>xmlhttp.send(“fname=Bill&amp;lname=Gates”);<br><br><p></p>
-<p></p><h4>onreadystatechange 事件</h4>    当请求被发送到服务器时，我们需要执行一些基于响应的任务。<br>每当 readyState 改变时，就会触发 onreadystatechange 事件。<br>readyState 属性存有 XMLHttpRequest 的状态信息。<br>onreadystatechange    存储函数（或函数名），每当 readyState 属性改变时，就会调用该函数。<br>readyState<br>存有 XMLHttpRequest 的状态。从 0 到 4 发生变化。<br>0: 请求未初始化<br>1: 服务器连接已建立<br>2: 请求已接收<br>3: 请求处理中<br>4: 请求已完成，且响应已就绪<br>status<br>200: “OK”<br>404: 未找到页面<p></p>
-<p>xmlhttp.onreadystatechange=function()<br>  {<br>  if (xmlhttp.readyState==4 &amp;&amp; xmlhttp.status==200)<br>    {<br>    document.getElementById(“myDiv”).innerHTML=xmlhttp.responseText;<br>    }<br>  }<br><br></p>
-<p></p><h4>完整的实例</h4><br>var xmlhttp;<br>function loadXMLDoc(url,cfunc)<br>{<br>if (window.XMLHttpRequest)<br>  {// code for IE7+, Firefox, Chrome, Opera, Safari<br>  xmlhttp=new XMLHttpRequest();<br>  }<br>else<br>  {// code for IE6, IE5<br>  xmlhttp=new ActiveXObject(“Microsoft.XMLHTTP”);<br>  }<br>xmlhttp.onreadystatechange=cfunc;<br>xmlhttp.open(“GET”,url,true);<br>xmlhttp.send();<br>}<br>function myFunction()<br>{<br>loadXMLDoc(“/ajax/test1.txt”,function()<br>  {<br>  if (xmlhttp.readyState==4 &amp;&amp; xmlhttp.status==200)<br>    {<br>    document.getElementById(“myDiv”).innerHTML=xmlhttp.responseText;<br>    }<br>  });<br>}<p></p>
-
+        <blockquote>
+<p>版权声明：本文为博主原创文章，未经博主允许不得转载。</p>
+</blockquote>
+<p>在学习之前，您需要对下面的知识有基本的了解：<br>HTML / XHTML<br>CSS<br>JavaScript / DOM</p>
+<h4 id="什么是-AJAX-？"><a href="#什么是-AJAX-？" class="headerlink" title="什么是 AJAX ？"></a>什么是 AJAX ？</h4><p>AJAX = 异步 JavaScript 和 XML。<br>AJAX 是一种用于创建快速动态网页的技术。<br>通过在后台与服务器进行少量数据交换，AJAX 可以使网页实现异步更新。这意味着可以在不重新加载整个网页的情况下，对网页的某部分进行更新。<br>传统的网页（不使用 AJAX）如果需要更新内容，必需重载整个网页面。<br>有很多使用 AJAX 的应用程序案例：新浪微博、Google 地图、开心网等等。</p>
+<h4 id="创建-XMLHttpRequest-对象"><a href="#创建-XMLHttpRequest-对象" class="headerlink" title="创建 XMLHttpRequest 对象"></a>创建 XMLHttpRequest 对象</h4><p>XMLHttpRequest 用于在后台与服务器交换数据。<br>创建 XMLHttpRequest 对象的语法：<br>variable=new XMLHttpRequest();<br>老版本的 Internet Explorer （IE5 和 IE6）使用 ActiveX 对象：<br>variable=new ActiveXObject(“Microsoft.XMLHTTP”);</p>
+<pre><code>var xmlhttp;
+if (window.XMLHttpRequest)
+      {// code for IE7+, Firefox, Chrome, Opera, Safari
+          xmlhttp=new XMLHttpRequest();
+      }else{// code for IE6, IE5
+          xmlhttp=new ActiveXObject(&quot;Microsoft.XMLHTTP&quot;);
+      }
+</code></pre><h4 id="向服务器发送请求"><a href="#向服务器发送请求" class="headerlink" title="向服务器发送请求"></a>向服务器发送请求</h4><p>如需将请求发送到服务器，我们使用 XMLHttpRequest 对象的 open() 和 send() 方法：<br>xmlhttp.open(“GET”,”test1.txt”,true);<br>xmlhttp.send();<br>方法    描述<br>open(method,url,async)<br>规定请求的类型、URL 以及是否异步处理请求。<br>method：请求的类型；GET 或 POST<br>url：文件在服务器上的位置<br>async：true（异步）或 false（同步）<br>send(string)<br>将请求发送到服务器。<br>string：仅用于 POST 请求</p>
+<h4 id="GET-还是-POST？"><a href="#GET-还是-POST？" class="headerlink" title="GET 还是 POST？"></a>GET 还是 POST？</h4><p>与 POST 相比，GET 更简单也更快，并且在大部分情况下都能用。<br>然而，在以下情况中，请使用 POST 请求：<br>无法使用缓存文件（更新服务器上的文件或数据库）<br>向服务器发送大量数据（POST 没有数据量限制）<br>发送包含未知字符的用户输入时，POST 比 GET 更稳定也更可靠</p>
+<h4 id="为了缓存情况，请向-URL-添加一个唯一的-ID"><a href="#为了缓存情况，请向-URL-添加一个唯一的-ID" class="headerlink" title="为了缓存情况，请向 URL 添加一个唯一的 ID"></a>为了缓存情况，请向 URL 添加一个唯一的 ID</h4><p>xmlhttp.open(“GET”,”demo_get.asp?t=” + Math.random(),true);<br>xmlhttp.send();<br>如果需要像 HTML 表单那样 POST 数据，请使用 setRequestHeader() 来添加 HTTP 头。然后在 send() 方法中规定您希望发送的数据：<br>xmlhttp.open(“POST”,”ajax_test.asp”,true);<br>xmlhttp.setRequestHeader(“Content-type”,”application/x-www-form-urlencoded”);<br>xmlhttp.send(“fname=Bill&amp;lname=Gates”);</p>
+<h4 id="onreadystatechange-事件"><a href="#onreadystatechange-事件" class="headerlink" title="onreadystatechange 事件"></a>onreadystatechange 事件</h4><p>当请求被发送到服务器时，我们需要执行一些基于响应的任务。<br>每当 readyState 改变时，就会触发 onreadystatechange 事件。<br>readyState 属性存有 XMLHttpRequest 的状态信息。<br>onreadystatechange    存储函数（或函数名），每当 readyState 属性改变时，就会调用该函数。<br>readyState<br>存有 XMLHttpRequest 的状态。从 0 到 4 发生变化。<br>0: 请求未初始化<br>1: 服务器连接已建立<br>2: 请求已接收<br>3: 请求处理中<br>4: 请求已完成，且响应已就绪<br>status<br>200: “OK”<br>404: 未找到页面</p>
+<pre><code>xmlhttp.onreadystatechange=function(){
+          if (xmlhttp.readyState==4 &amp;&amp; xmlhttp.status==200){
+            document.getElementById(&quot;myDiv&quot;).innerHTML=xmlhttp.responseText;
+        }
+      }
+</code></pre><h4 id="完整的实例"><a href="#完整的实例" class="headerlink" title="完整的实例"></a>完整的实例</h4><pre><code>var xmlhttp;
+function loadXMLDoc(url,cfunc){
+    if (window.XMLHttpRequest){// code for IE7+, Firefox, Chrome, Opera, Safari
+          xmlhttp=new XMLHttpRequest();
+      }else{// code for IE6, IE5
+          xmlhttp=new ActiveXObject(&quot;Microsoft.XMLHTTP&quot;);
+      }
+    xmlhttp.onreadystatechange=cfunc;
+    xmlhttp.open(&quot;GET&quot;,url,true);
+    xmlhttp.send();
+}
+function myFunction(){
+    loadXMLDoc(&quot;/ajax/test1.txt&quot;,function(){
+          if (xmlhttp.readyState==4 &amp;&amp; xmlhttp.status==200){
+            document.getElementById(&quot;myDiv&quot;).innerHTML=xmlhttp.responseText;
+        }
+      });
+}
+</code></pre>
     </article>
     <!-- 前后页  -->
     <ul class="post-pager">
@@ -333,18 +363,7 @@
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <div class="total-archive"> Total : 10 </div>
+    <div class="total-archive"> Total : 9 </div>
     
     <div class="post-archive">
     
@@ -372,11 +391,6 @@
     
     <div class="archive-year"> 2016 </div>
     <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">12/03</span><a class="archive-post-title" href= "/2016/12/03/111/" >在github上生成一个新的秘钥</a>
-        </li>
     
     
         <li class="archive-post-item">
