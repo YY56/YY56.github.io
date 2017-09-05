@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
     <title>
         
-        离开岛的鱼
+        前端兼容性问题与解决 · 离开岛的鱼
         
     </title>
     <link rel="icon" href= /favicon.ico>
@@ -92,7 +92,7 @@
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            [404]
+            前端兼容性问题与解决
             
         </h1>
         <!-- 副标题 -->
@@ -106,60 +106,72 @@
     </div>
 </div>
         <div class="container">
-            <main class="main index-page">
-    
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2016/09/10/React入门/" >
-                    <h2 class="abstract-title">
-                        
-                        <span>React入门</span>
-                    </h2>
-                <div class="abstract-content">
-                    前置知识1.JS，CSS基础2.Sass，Compass3.Yeoman，Grunt，Webpack4.CommonJS，NodeJS5.Git，Github
-JSXJSX字面上的意思就是javascript和xml，是facebook为react 框架开发的一套语法糖。｛解析js的表达式｝需要解析库解析，最终被解析成JS。type为text/jsx。
-html只有个根元素，div id=”container”。
-css声明类名改为className，内联样式style＝｛｛color：‘red’｝｝。
+            <main class="main post-page">
+    <article class="article-entry">
+        <p></p><h2>css</h2><p></p>
+<p></p><h4>1.ie浮动产生的双倍距离</h4><p></p>
+<p>给浮动的元素设置 display：inline-block</p>
 
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2016/09/10</span>
-                </div>
-            </div>
-        </article>
+<p></p><h4>4.浏览器的默认的css各有不同，解决办法</h4><p></p>
+<p>设置css的初始样式reset，统一规定</p>
+
+<p></p><h4>3.背景透明问题</h4><p></p>
+<p>ie:filter:alpha(opacity=0.2)<br>FF: opacity:0.6;</p>
+
+<p></p><h4>4.min-height最小高度的实现（兼容IE6、IE7、FF）</h4><p></p>
+<p>height:auto;<br>min-height:100px;</p>
+
+<p></p><h4>5.Box阴影(CSS3)</h4><p></p>
+<p>    .box { box-shadow: 5px 5px 5px #666;<br>    -moz-box-shadow: 5px 5px 5px #666;<br>     -webkit-box-shadow: 5px 5px 5px #666; }</p>
+
+<p></p><h4>6.文字与表单对齐方法？</h4><p></p>
+<p>vertical-align:middle</p>
+
+<p></p><h4>7.文字与图片垂直居中对齐方法？</h4><p></p>
+<p>图片内嵌在文字里面，给文字设置 vertical-align:middle</p>
+
+<p></p><h4>8.图片的3像素距离</h4><p></p>
+<p>display：inline-block</p><br><br><br><br><br><h2>js</h2><br><h4>1.event.x与event.y问题</h4><p>问题说明：IE下，even对象有x、y属性，但是没有pageX、pageY属性；Firefox下，even对象有pageX、pageY属性，但是没有x、y属性。<br>解决方法：var myX = event.x ? event.x : event.pageX; var myY = event.y ? event.y:event.pageY;</p>
+
+<p></p><h4>2.event.srcElement问题</h4><p></p>
+<p>问题说明：IE下，even对象有srcElement属性，但是没有target属性；Firefox下，even对象有target属性，但是没有srcElement属性。<br>解决方法：使用srcObj = event.srcElement ? event.srcElement : event.target;</p>
+
+<p></p><h4>3.window.location.href问题</h4><p></p>
+<p>问题说明：IE或者Firefox2.0.x下，可以使用window.location或window.location.href；Firefox1.5.x下，只能使用window.location。<br>解决方法：使用 window.location 来代替 window.location.href。当然也可以考虑使用 location.replace()方法。</p>
+
+<p></p><h4>4.访问的父元素的区别</h4><p></p>
+<p>问题说明：在IE下，使用 obj.parentElement 或 obj.parentNode 访问obj的父结点；在firefox下，使用 obj.parentNode 访问obj的父结点。<br>解决方法：因为firefox与IE都支持DOM，因此统一使用obj.parentNode 来访问obj的父结点。</p>
+
+<p></p><h4>5.innerText的问题. </h4><p></p>
+<p>问题说明：innerText在IE中能正常工作，但是innerText在FireFox中却不行。<br>解决方法：在非IE浏览器中使用textContent代替innerText。<br>示例：<br><br>if(navigator.appName.indexOf(“Explorer”) &gt;-1){<br>document.getElementById(‘element’).innerText = “my text”;<br>} else{<br>document.getElementById(‘element’).textContent = “;my text”;<br>}<br>[注] innerHTML 同时被ie、firefox等浏览器支持，其他的，如outerHTML等只被ie支持，最好不用。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </article>
+    <!-- 前后页  -->
+    <ul class="post-pager">
+        
+        
+    </ul>
+    <!-- 来必力City版安装代码 -->
+
     
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2016/09/06/HEXO-github-搭建属于自己的博客/" >
-                    <h2 class="abstract-title">
-                        
-                        <span>HEXO+github,搭建属于自己的博客</span>
-                    </h2>
-                <div class="abstract-content">
-                    hexo是一款基于Node.js的静态博客框架,hexo github链接,这篇教程是针对与Mac的.之前是想着写博客，一方面是给自己做笔记，可以提升自己的写作、总结能力，一个技术点我们会使用，并不难，但是要做到让让别人也能听懂我们讲得，还是需要一定的技巧和经验的。很多类似于CSDN、博客园也都可以写文章，但是页面的样式我，不是太喜欢，简书还算好点得。最近看到一些大神们的博客,貌似都是用hexo写得,我也依葫芦画瓢的搭建了一个。不罗嗦了，直接上搭建步骤。
-配置环境安装Node（必须）作用：用来生成静态页面的到Node.js官网下载相应平台的最新版本，一路安装即可。
-安装Git（必须）作用...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2016/09/06</span>
-                </div>
-            </div>
-        </article>
-    
-    <!-- paginator  -->
-    
+
+<!-- City版安装代码已完成 -->
 </main>
             <!-- profile -->
             

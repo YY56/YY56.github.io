@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
+    <title>
+        
+        前端面试题 · 离开岛的鱼
+        
+    </title>
+    <link rel="icon" href= /favicon.ico>
+    <!-- 提前加载place holder  -->
+    <style>
+        @font-face {
+            font-family: 'Oswald-Regular';
+            src: url('/font/Oswald-Regular.ttf');
+        }
+        @font-face {
+            font-family: 'Source Sans Pro';
+            src: url('/font/Source Sans Pro.woff'),
+            url('/font/Source Sans Pro.woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Source Code Pro';
+            src: url('/font/SourceCodePro-Regular.ttf.woff'),
+            url('/font/SourceCodePro-Regular.ttf.woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        
+        .site-intro-placeholder {
+        position: absolute;
+        z-index: -2;
+        top: 0;
+        left: 0px;
+        width: calc(100% + 300px);
+        height: 100%;
+        background: repeating-linear-gradient(-45deg, #444 0, #444 80px, #333 80px, #333 160px);
+        background-position: center center;
+        transform: translate3d(-226px, 0, 0);
+        animation: gradient-move 2s ease-out 0s 1;
+        }
+        @keyframes gradient-move {
+        0% {
+            transform: translate3d(-226px, 0, 0);
+        }
+        99% {
+            transform: translate3d(0, 0, 0);
+        }
+        99.1% {
+            transform: translate3d(-226px, 0, 0);
+        }
+        100% {
+            transform: translate3d(-226px, 0, 0);
+        }
+    }
+    </style>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="//cdn.staticfile.org/jquery/3.2.1/jquery.min.js" defer></script>
+    
+    <script src="/scripts/main.js" defer></script>
+    <!-- 百度统计  -->
+    
+    <!-- 谷歌统计  -->
+    
+</head>
+    
+        <body class="four-zero-four-body">
+    
+    
+<header class="header">
+
+    <div class="header-sidebar-menu">&#xe775;</div>
+    <!-- post页的toggle banner  -->
+    
+    <a class="home-link" href=/>离开岛的鱼</a>
+</header>
+    <div class="wrapper">
+        <div class="site-intro">
+    
+    <!-- 主页  -->
+    
+    
+    
+    <div class="site-intro-img" style="background-image: url(http://oumn0o088.bkt.clouddn.com/404.jpg)"></div>
+    <div class="site-intro-placeholder"></div>
+    <div class="site-intro-meta">
+        <!-- 标题  -->
+        <h1 class="intro-title">
+            <!-- 主页  -->
+            
+            前端面试题
+            
+        </h1>
+        <!-- 副标题 -->
+        <p class="intro-subtitle">
+            <!-- 主页副标题  -->
+            
+            <p class="intro-subtitle"> </p>
+        
+        <!-- 文章页meta -->
+        
+    </div>
+</div>
+        <div class="container">
+            <main class="main post-page">
+    <article class="article-entry">
+        <p></p><h2>HTML+CSS</h2><p></p>
+<p></p><h4>1.Doctype作用? 严格模式与混杂模式如何区分？它们有何意义?</h4><br>&lt;!DOCTYPE&gt; 声明位于文档中的最前面，处于标签之前。告知浏览器以何种模式来渲染文档。<br>严格模式的排版和 JS 运作模式是 以该浏览器支持的最高标准运行。<br>在混杂模式中，页面以宽松的向后兼容的方式显示。模拟老式浏览器的行为以防止站点无法工作。<br>DOCTYPE不存在或格式不正确会导致文档以混杂模式呈现。<br><br><p></p>
+<p></p><h4>2.HTML与XHTML——二者有什么区别</h4><br>所有的标记都必须要有一个相应的结束标记<br>所有标签的元素和属性的名字都必须使用小写<br>所有的XML标记都必须合理嵌套<br>所有的属性必须用引号””括起来<br>把所有&lt;和&amp;特殊符号用编码表示<br>给所有属性赋一个值<br>不要在注释内容中使“–”<br>图片必须有说明文字<br>（标签闭合，标签小写，合理的嵌套）<br><br><p></p>
+<p></p><h4>3.什么是语义化的HTML</h4><br>直观的认识标签，去掉或者丢失样式的时候能够让页面呈现出清晰的结构<br>有利于SEO：和搜索引擎建立良好沟通，有助于爬虫抓取更多的有效信息：爬虫依赖于标签来确定上下文和各个关键字的权重；<br>方便其他设备解析（如屏幕阅读器、盲人阅读器、移动设备）以意义的方式来渲染网页；<br>便于团队开发和维护，语义化更具可读性，是下一步吧网页的重要动向，遵循W3C标准的团队都遵循这个标准，可以减少差异化。<br><br><p></p>
+<p></p><h4>4.对WEB标准以及W3C的理解与认识</h4><br>标签闭合、标签小写、不乱嵌套、提高搜索机器人搜索几率、使用外 链css和js脚本、结构行为表现的分离、文件下载与页面速度更快、内容能被更多的用户所访问、内容能被更广泛的设备所访问、更少的代码和组件，容易维 护、改版方便，不需要变动页面内容、提供打印版本而不需要复制内容、提高网站易用性；<br><br><p></p>
+<p></p><h4>5.行内元素有哪些?块级元素有哪些?CSS的盒模型?</h4><br>行内元素：a,i,span,input,select<br>块级元素：p,div,ui,li,h1~h4,form<br>盒模型：内容,padding,border,margin<br><br><p></p>
+<p></p><h4>6.CSS引入的方式有哪些? link和@import的区别是?</h4><br>内联 内嵌 外链 导入<br>link属于xhtml标签，而@import是css提供的<br>在页面加载时link会同时被加载，而@import需要页面被加载完成后才加载<br>@import只有在ie5 以上才被识别，而link无兼容性问题<br><br><p></p>
+<p></p><h4>7.CSS选择符有哪些?哪些属性可以继承?优先级算法如何计算?内联和important哪个优先级高?</h4><br>id选择符 类选择符 标签选择符<br>id&gt;class&gt;标签选择符<br>import优先级高<br><br><p></p>
+<p></p><h4>8.前端页面有哪三层构成，分别是什么?作用是什么?</h4><br>结构层 html<br>表现层 css<br>行为层 js<br><br><p></p>
+<p></p><h4>9.css的基本语句构成是?</h4><br>选择器{<br>    属性1：值1；<br>    属性2：值2；<br>    ···<br>}<br><br><p></p>
+<p></p><h4>10.你做的页面在哪些流览器测试过?这些浏览器的内核分别是什么</h4><br>ie(trident)<br>火狐(Gecko)<br>谷歌(webkit)<br>opear(Presto)<br><br><p></p>
+<p></p><h4>11.标签上title与alt属性的区别是什么?</h4><br>title:为该属性是提供信息<br>alt:图片为加载失败时的文字信息<br><br><p></p>
+<p></p><h4>12.描述css reset的作用和用途</h4><br>reset 重置浏览器默认的css的属性，由于浏览器的不同，会有不同是css初始值样式，重置样式，统一样式<br><br><p></p>
+<p></p><h4>13.解释css sprites，如何使用。</h4><br>由零散的图片合并成一张大图，减少服务器对图片的请求数量<br><br><p></p>
+<p></p><h4>14.浏览器标准模式和怪异模式之间的区别是什么?</h4><br>盒模型 渲染模式不同<br>可以用 window.top.document.compatMode查看是什么模式<br><br><p></p>
+<p></p><h4>15.你如何对网站的文件和资源进行优化?期待的解决方案包括：<br></h4><br>合并文件<br>压缩文件<br>使用缓存<br>使用CDN托管<br><br><p></p>
+<p></p><h4>16.简述一下src与href的区别</h4><br>href指向网络资源的位置，用于建立超链接<br>src指向外部资源，请求时下载并嵌入标签内进行应用，例如js脚本，img<br><br><p></p>
+<p></p><h4>17.什么是CSS Hack?</h4><br>针对于不同的浏览器用同的css，就是css hack<br>ie浏览器一般分为三种css hack：条件hack 属性hack 选择器hack<br><br><p></p>
+<p></p><h4>18.简述同步和异步的区别</h4><br>同步为阻塞模式，异步为非阻塞模式<br>同步：一个进程在执行某个请求，这个请求要一段时间才能返回信息，此时需要等待直到有信息的返回，该进程才执行下去<br>异步：是指进程不需要等待，可以一直执行下去，等到有信息返回的时候进程会进行处理，这样可以提高执行效率<br><br><p></p>
+<p></p><h4>19.px和em的区别</h4><br>px和em都是长度单位。<br>px是固定的值<br>em是不固定的，继承父元素的字体大小，浏览器默认字体大小是16px<br><br><p></p>
+<p></p><h4>20.什么叫优雅降级和渐进增强</h4><br>优雅降级：一开始就构建完整的功能，然后再进行低版本的兼容<br>渐进增强：针对低版本浏览器进行网页的构建，保证最低版本的功能，然后进行高版本浏览器效果，交互等改进和新功能的追加，达到最佳的用户体验。<p></p>
+<p><br></p>
+<p></p><h4>20.HTML5 为什么只需要写 !DOCTYPE HTML？</h4><br>HTML5不是基于SGML，因此不需要对DTD进行引用，但是需要doctype来规范浏览器的行为，而HTML4.01是基于SGML所以需要引用DTD，才能告知浏览器文档所使用的文档类型。<br><br><p></p>
+<p></p><h4>21.请描述一下 cookies，sessionStorage 和 localStorage 的区别？</h4><br>不同:<br>cookie在浏览器和服务器之前来回传递，而sessionStorage和locationStorage不会<br>sessionStorage和locationStorage有独立的存储空间且存储空间更大，有丰富易用的接口。<p></p>
+<p>大小不同:<br>cookie 4K Storage 5M</p>
+<p>有效期不同:<br>cookie过期之前有效<br>sessionStorage仅在浏览器关闭前有效<br>locationStorage始终是有效的</p>
+<p>作用域不同:<br>sessionStorage在不同浏览器窗口不共享，即使是同一个页面<br>cookie:同源共享<br>locationStorage:同源共享</p>
+<p><br></p>
+<p></p><h4>22.如何实现浏览器内多个标签页之间的通信?</h4><br>使用cookie和locationStorage等本地存储方式<br><br><p></p>
+<p></p><h4>23.CSS隐藏元素的几种方法（至少说出三种）</h4><br>opacity:占用原本的位置，影响用户的交互<br>visibility:和opacity不同的是不影响用户的交互<br>display:设置none值，效果是不占据位置，子昂是完全不存在一样。<br><br><p></p>
+<p></p><h4>24.CSS清除浮动的几种方法（至少两种）</h4><br>给父元素是设置height<br>给父元素添加after伪类<br>给父元素设置overflow：hidden<br>给父元素设置overflow：auto<br>尾部添加空标签div，并设置clear：both<p></p>
+<p><br></p>
+<p></p><h4>25.html5有哪些新特性、移除了那些元素？如何处理HTML5新标签的浏览器兼容问题？如何区分 HTML 和 HTML5？</h4><br>1.拖拽释放(Drag and drop) API<br>2.语义化更好的内容标签（header,nav,footer,aside,article,section）<br>3.音频、视频API(audio,video)<br>4.画布(Canvas) API<br>5.地理(Geolocation) API<br>6.本地离线存储 localStorage 长期存储数据，浏览器关闭后数据不丢失；<br><br><p></p>
+<p></p><h4>26.CSS3有哪些新特性</h4><br>border-radius 圆角<br>box-shadow 阴影<br>gradient 渐变<br>transform 旋转<br>等<br><br><p></p>
+<p></p><h2>JS</h2><p></p>
+<p></p><h4>1.javascript的typeof返回哪些数据类型</h4><br>number obj function boolean underfind<br><br><p></p>
+<p></p><h4>2.例举3种强制类型转换和2种隐式类型转换?</h4><br>强制转换:parseInt parseFloat number<br>隐式转换:- ==<br><br><p></p>
+<p></p><h4>3.split() join() 的区别</h4><br>split()是把字符串切割为数组<br>join()是把数组拼接成字符串<br><br><p></p>
+<p></p><h4>4.数组方法pop() push() unshift() shift()</h4><br>pop()从数组尾数删除<br>push()从数组尾部增加<br>unshift()从数组的头部增加<br>shift()从数组的尾部删除<br><br><p></p>
+<p></p><h4>5.IE和标准下有哪些兼容性的写法</h4><br>var ev = ev || window.event<br>var target = ev.srcElement || ev.target<br><br><p></p>
+<p></p><h4>6.ajax请求的时候get 和post方式的区别</h4><br>get:将请求的参数加在url尾部，传送体积小，安全性低，通常用于数据的获取<br>post:将请求包含在请求头里，传送的体积较大，由于参数没有暴露在url上，安全性较高，通常用于修改数据<p></p>
+<p><br></p>
+<p></p><h4>7.call和apply的区别</h4><br>obj.call(this,obj1,obg2,···)<br>obj.apply(this,arguments)<br><br><p></p>
+<p></p><h4>8.ajax请求时，如何解析json数据</h4><br>parse eval 但是对于parse的安全性更高<br><br><p></p>
+<p></p><h4>8.事件委托是什么</h4><br>利用冒泡原理，让自己的触发事件由父元代替执行<br><br><p></p>
+<p></p><h4>9.闭包是什么，有什么特性，对页面有什么影响</h4><br>闭包是可以读取其他函数内部变量的函数<br><br><p></p>
+<p></p><h4>10.如何阻止事件冒泡和默认事件</h4><br>function stopBubble(e){<br>    if(e&amp;&amp;e.stopPropagation){<br>        e.stopPropagation();<br>    }else{<br>        window.event.cancelBubble = true<br>    }<p></p>
+<p>}</p>
+<p>function stopDefault(e){<br>    if(e&amp;&amp;e.stopDefault){<br>        e.stopDefault()<br>    }else{<br>        window.event.returnValue = false<br>    }<br>}<br><br></p>
+<p></p><h4>11.添加 删除 替换 插入到某个接点的方法</h4><br>obj.appendChild()<br>obj.removeChild()<br>obj.repalceChild()<br>obj.inserBefore()<br><br><p></p>
+<p></p><h4>12.解释jsonp的原理，以及为什么不是真正的ajax</h4><br>动态创建script标签，毁掉函数<br>Ajax是无需刷新请求数据<br><br><p></p>
+<p></p><h4>13.javascript的本地对象，内置对象和宿主对象</h4><br>本地对象:array obj regexp等可以new的实例化对象<br>内置对象:gload Math 等不可实例化的对象<br>宿主对象:浏览器自带的 window document 等对象<br><br><p></p>
+<p></p><h4>14.document load 和document ready的区别</h4><br>load是结构样式加载完成后再执行js<br>ready不是原生，JQ中有$().ready(function)<br><br><p></p>
+<p></p><h4>15.”==”和“===”的不同</h4><br>前者会自动转换，后者不会<br><br><p></p>
+<p></p><h4>16.javascript的同源策略</h4><br>一段脚本只能读取来自同一源的窗口和文档的属性，这里的同一源指的是主机名，协议和端口的组合<br><br><p></p>
+<p></p><h4>17.怎样创建和查找节点？</h4><br>创建节点<br>createElement()<br>createTextNode()<br>查找节点<br>getElementByTagName()<br>getElementByName()<br>getElementById()<br><br><p></p>
+<p></p><h4>18.如何消除一个数组里面重复的元素？</h4><br>var arr1 = [1,2,3,3,4,4,4,5,5,6]<br>var arr2 = []<br>for(var i = 0 ; i &lt; arr1.length ; i ++){<br>    if(arr2.indexOf(arr1[i]) &lt; 0 ){<br>        arr2.push(arr1[i])<br>    }<br>}<br>document.write(arr2)<br><br><p></p>
+<p></p><h4>19.了解Node么？Node的使用场景都有哪些？</h4><br>高并发 聊天 实时消息推送<br><br>    <p></p>
+<p></p><h4>20.对于前端自动化构建工具有了解吗？简单介绍一下</h4><br>gulp grunt<br><br><p></p>
+<p></p><h4>21.this对象的理解</h4><br>this总是指向函数的直接调用者<br>如果有关键字new，那就是new出来的那个对象<br>在事件中，this指向触发该事件的对象，特殊的是，IE中的attachEvent中的this总是指向全局对象Window<br><br><p></p>
+<p></p><h4>22.null和undefined的区别？</h4><br>null<br>表示为一个“无”的对象，用数值表示为0<br>作为函数的参数，表示该参数不是对象<br>作为对象的原型链的终点<p></p>
+<p>underfind<br>表示一个“无”的原始值，用数字表示为NaN<br>表示变量声明了，但是没有赋值<br>调用函数式，提供的参数没有提供<br><br>    </p>
+<p></p><h4>23.JSON 的了解</h4><br>json是一种轻量级的数据格式，数据格式简单，易于读写，占用宽带小<br>格式：{“age”：“12”，“name”：“lili”}<p></p>
+<p><br><br><br>    </p>
+<p></p><h2>HTTP</h2><p></p>
+<p></p><h4>一次完整的HTTP事务是怎样的一个过程？</h4><br>域名解析<br>发起TCP3次握手<br>建立TCP连接后，发起http请求<br>服务端响应请求，浏览器得到html代码<br>浏览器解析html代码，并获取html代码中的资源<br>在浏览器中对页面进行渲染<br><br><p></p>
+<p></p><h4>HTTP的状态码有哪些？</h4><br>100-199:指定客户端相应的操作<br>200-299:请求成功<br>300-399:重定向<br>400-499:客户端错误<br>500-599:服务端错误<p></p>
+
+    </article>
+    <!-- 前后页  -->
+    <ul class="post-pager">
+        
+        
+    </ul>
+    <!-- 来必力City版安装代码 -->
+
+    
+
+<!-- City版安装代码已完成 -->
+</main>
+            <!-- profile -->
+            
+        </div>
+        <footer class="footer">
+    <!-- social  -->
+    
+    <div class="social">
+        
+    
+        
+            
+                <a href="emailto:mover56@126.com" class="iconfont-archer email" title=email ></a>
+            
+        
+    
+        
+            
+                <a href="//github.com/YY56" class="iconfont-archer github" target="_blank" title="github"></a>
+            
+        
+    
+        
+    
+
+    </div>
+    
+    <!-- powered by Hexo  -->
+    <div class="copyright">
+        <span id="hexo-power">Powered by <a href="https://hexo.io/" target="_blank">Hexo</a></span><span class="iconfont-archer power">&#xe635;</span>
+        <span
+            id="theme-info">Theme <a href="https://github.com/fi3ework/hexo-theme-archer" target="_blank">archer</a></span>
+    </div>
+    <!-- 不蒜子  -->
+    
+</footer>
+    </div>
+    <div class="back-top">&#xe639;</div>
+    <div class="sidebar">
+    <div class="sidebar-header">
+        <div class="sidebar-category">
+            <span class="sidebar-archive-link"><span class="iconfont-archer">&#xe67d;</span>Archive</span>
+            <span class="sidebar-tags-link"><span class="iconfont-archer">&#xe610;</span>Tag</span>
+        </div>
+    </div>
+    <div class="sidebar-content sidebar-content-show-archive">
+          <div class="sidebar-archive">
+    <!-- 在ejs中将archive按照时间排序 -->
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="total-archive"> Total : 6 </div>
+    
+    <div class="post-archive">
+    
+    
+    
+    
+    <div class="archive-year"> 2017 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/30</span><a class="archive-post-title" href= "/2017/08/30/Js-引擎的LHS、RHS查询/" >Js 引擎的LHS、RHS查询</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/01</span><a class="archive-post-title" href= "/2017/02/01/如何使用命令行快速打开sublime编辑器/" >如何使用命令行快速打开sublime编辑器</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/04</span><a class="archive-post-title" href= "/2017/01/04/putingithub/" >上传到github仓库，并在线浏览网页</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> 2016 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/19</span><a class="archive-post-title" href= "/2016/10/19/ajax/" >ajax</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/10</span><a class="archive-post-title" href= "/2016/09/10/React入门/" >React入门</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/06</span><a class="archive-post-title" href= "/2016/09/06/HEXO-github-搭建属于自己的博客/" >HEXO+github,搭建属于自己的博客</a>
+        </li>
+    
+    </div>
+  </div>
+        <div class="sidebar-tags">
+    <div class="sidebar-tags-name">
+    
+    </div>
+    <div class="tag-load-fail" style="display: none; color: #ccc; font-size: 0.6rem;">
+    缺失模块。<br/>
+    1、请确保node版本大于6.2<br/>
+    2、在博客根目录（注意不是archer根目录）执行以下命令：<br/>
+    <span style="color: #f75357; font-size: 1rem; line-height: 2rem;">npm i hexo-generator-json-content --save</span><br/>
+    3、在根目录_config.yml里添加配置：
+    <pre style="color: #888; font-size: 0.6rem;">
+jsonContent:
+  meta: false
+  pages: false
+  posts:
+    title: true
+    date: true
+    path: true
+    text: false
+    raw: false
+    content: false
+    slug: false
+    updated: false
+    comments: false
+    link: false
+    permalink: false
+    excerpt: false
+    categories: false
+    tags: true</pre>
+    </div> 
+    <div class="sidebar-tag-list"></div>
+</div>
+    </div>
+</div> 
+    <script>
+    var jsInfo = {
+        root: '/'
+    }
+</script>
+    <!-- 不蒜子  -->
+    
+    <!-- CNZZ统计  -->
+    
+    </div>
+    </body>
+</html>
+
+
