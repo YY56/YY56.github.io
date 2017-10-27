@@ -111,17 +111,25 @@
     
     
         <article class="index-post">
-            <a class="content-show-full" href = "/2016/09/10/React入门/" >
+            <a class="content-show-full" href = "/2017/10/27/max-上使用svn/" >
                     <h2 class="abstract-title">
                         
-                        <span>React入门</span>
+                        <span>max 上使用svn客户端</span>
                     </h2>
                 <div class="abstract-content">
-                    前置知识1.JS，CSS基础2.Sass，Compass3.Yeoman，Grunt，Webpack4.CommonJS，NodeJS5.Git，Github
-JSXJSX字面上的意思就是javascript和xml，是facebook为react 框架开发的一套语法糖。｛解析js的表达式｝需要解析库解析，最终被解析成JS。type为text/jsx。
-html只有个根元素，div id=”container”。
-css声明类名改为className，内联样式style＝｛｛color：‘red’｝｝。
+                    
+版权声明：本文为博主原创文章，未经博主允许不得转载。
 
+mac上有自带的svn服务端和客户端的功能，所以我们不用借助第三方软件就可以使用svn来帮我们快速的实现版本的管理。
+使用svn客户端1.创建一个新的文件夹用于存放 ，然后进入文件夹，检出工作副本，
+mkdir svnrtest
+cd svntest
+svn checkout  https://地址 --username xxx --password xxx
+也可以不提前输入用户i名和密码，直接回车，跟着控制台的提示输入。
+2.增加文件或文件夹或增加所有
+svn add css
+svn ass reset.css
+svn add ...
                 </div>
             </a>
             <div class="abstract-post-meta">
@@ -129,31 +137,7 @@ css声明类名改为className，内联样式style＝｛｛color：‘red’｝�
                 
                 <!-- date  -->
                 <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2016/09/10</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2016/09/06/HEXO-github-搭建属于自己的博客/" >
-                    <h2 class="abstract-title">
-                        
-                        <span>HEXO+github,搭建属于自己的博客</span>
-                    </h2>
-                <div class="abstract-content">
-                    hexo是一款基于Node.js的静态博客框架,hexo github链接,这篇教程是针对与Mac的.之前是想着写博客，一方面是给自己做笔记，可以提升自己的写作、总结能力，一个技术点我们会使用，并不难，但是要做到让让别人也能听懂我们讲得，还是需要一定的技巧和经验的。很多类似于CSDN、博客园也都可以写文章，但是页面的样式我，不是太喜欢，简书还算好点得。最近看到一些大神们的博客,貌似都是用hexo写得,我也依葫芦画瓢的搭建了一个。不罗嗦了，直接上搭建步骤。
-配置环境安装Node（必须）作用：用来生成静态页面的到Node.js官网下载相应平台的最新版本，一路安装即可。
-安装Git（必须）作用...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2016/09/06</span>
+                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2017/10/27</span>
                 </div>
             </div>
         </article>
