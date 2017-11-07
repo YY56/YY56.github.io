@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
     <title>
         
-        离开岛的鱼
+        学习MongoDB笔记 · 离开岛的鱼
         
     </title>
     <link rel="icon" href= /favicon.ico>
@@ -68,13 +68,22 @@
     
 </head>
     
-        <body class="four-zero-four-body">
+        <body class="post-body">
     
     
 <header class="header">
 
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/" >离开岛的鱼</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">学习MongoDB笔记</a>
+            </div>
+    </div>
     
     <a class="home-link" href=/>离开岛的鱼</a>
 </header>
@@ -84,82 +93,118 @@
     <!-- 主页  -->
     
     
+    <!-- 404页  -->
     
-    <div class="site-intro-img" style="background-image: url(http://oumn0o088.bkt.clouddn.com/404.jpg)"></div>
+    <div class="site-intro-img" style="background-image: url(http://oumn0o088.bkt.clouddn.com/post-bg.jpg)"></div>
     <div class="site-intro-placeholder"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            [404]
+            学习MongoDB笔记
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
-            <p class="intro-subtitle"> </p>
+            
+        </p>
+        <!-- 404 -->
         
         <!-- 文章页meta -->
+        
+            <!-- 文章页标签  -->
+            
+            <div class="post-intro-meta">
+                <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                <span class="post-intro-time">2017/10/07</span>
+            </div>
+            <!-- 
+
+<div class="post-share iconfont-archer">
+    <ul class="share-box" data-href = "/2017/10/07/学习MongoDB笔记/" data-title = "学习MongoDB笔记" >
+        <li class="to-weibo">分享到微博</li>
+        <li class="to-wechat">分享到微信</li>
+        <li class="to-qq">分享到QQ</li>
+        <li class="to-twitter">分享到twitter</li>
+    </ul>
+</div> -->
         
     </div>
 </div>
         <div class="container">
-            <main class="main index-page">
-    
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2016/09/10/React入门/" >
-                    <h2 class="abstract-title">
-                        
-                        <span>React入门</span>
-                    </h2>
-                <div class="abstract-content">
-                    前置知识1.JS，CSS基础2.Sass，Compass3.Yeoman，Grunt，Webpack4.CommonJS，NodeJS5.Git，Github
-JSXJSX字面上的意思就是javascript和xml，是facebook为react 框架开发的一套语法糖。｛解析js的表达式｝需要解析库解析，最终被解析成JS。type为text/jsx。
-html只有个根元素，div id=”container”。
-css声明类名改为className，内联样式style＝｛｛color：‘red’｝｝。
+            <main class="main post-page">
+    <article class="article-entry">
+        <blockquote>
+<p>版权声明：本文为博主原创文章，未经博主允许不得转载。</p>
+</blockquote>
+<h2 id="为什么要选择mongobg"><a href="#为什么要选择mongobg" class="headerlink" title="为什么要选择mongobg"></a>为什么要选择mongobg</h2><p>mongodb是开源的noSQL数据库(NoSQL = Not Only SQL )，也被叫做“芒果数据库”，免费，开源，良好的技术支持。github，淘宝，京东，360，百度都在使用。<br>NoSQL的拥护者们提倡运用非关系型的数据存储，相对于铺天盖地的关系型数据库运用，这一概念无疑是一种全新的思维的注入。</p>
+<p><strong>1、基本的用法是存储JSON数据，这很适合JavaScript程序。其特性如下：</strong></p>
+<ul>
+<li>没有表结构的概念，每条记录可以有完全不同的结构</li>
+<li>业务开发方便快捷</li>
+<li>sql数据库需要事先定义表结构再使用 </li>
+</ul>
+<p><strong>2、完全支持索引:</strong></p>
+<ul>
+<li>单键索引、多建索引</li>
+<li>数组索引</li>
+<li>地理位置索引</li>
+</ul>
+<p><strong>3、方便的冗余和扩展：</strong></p>
+<ul>
+<li>数据集保证数据安全</li>
+<li>分片扩展数据规模</li>
+</ul>
+<p><strong>4、良好的支持：</strong></p>
+<ul>
+<li>完善的文档</li>
+<li>齐全的驱动支持</li>
+</ul>
+<h2 id="搭建简单服务"><a href="#搭建简单服务" class="headerlink" title="搭建简单服务"></a>搭建简单服务</h2><p>Mac OX上安装mongodb,mongodb的安装有好多种安装方法，有普通青年的HomeBrew方式，也有文艺青年的源码编译方式。我只想快速的装起来用一下，所以我选最简单的HomeBrew</p>
+<p><strong>更新Homebrew的package数据库，在Mac的终端中输入：</strong>时间有可能会比较长，没有信息提示，需要耐心等待</p>
+<pre><code>$ brew update
+</code></pre><p><strong>开始安装mongodb:</strong>然后继续等待mongodb下载完成。这个比较贴心了，有下载进度百分比。</p>
+<pre><code>$ brew install mongodb
+</code></pre><p><strong>修改环境变量：</strong></p>
+<pre><code>$ touch .base_profile
+$ open .base_profile
+</code></pre><p>加入path，保存</p>
+<pre><code>export MONGO_PATH=/usr/local/mongodb
+export PATH=$PATH:$MONGO_PATH/bin
+</code></pre><p><strong>启动mongodb服务端：</strong></p>
+<pre><code>mongod --config /usr/local/etc/mongod.conf
+</code></pre><p>（注：mongod.conf文件中bindIp: 127.0.0.1意思是本机访问，如果是外网访问需要重新设置）如果要修改数据库路径的话，终端输入 mongod –dbpath 路径</p>
+<p>此时，可以通过http访问该数据库，mongodb使用了27017端口，因此在浏览器中打开<a href="http://localhost:27017/。" target="_blank" rel="external">http://localhost:27017/。</a><br>出现如下提示即说明连接成功了<br><img src="https://raw.githubusercontent.com/YY56/YY56.github.io/master/images/putInGitHub1.jpeg" alt="images"></p>
 
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2016/09/10</span>
-                </div>
-            </div>
-        </article>
+    </article>
+    <!-- 前后页  -->
+    <ul class="post-pager">
+        
+            <li class="previous">
+                <a href= "/2017/10/27/max-上使用svn/" title= max 上使用svn客户端 >
+                    <span>Previous Post</span>
+                    <span>max 上使用svn客户端</span>
+                </a>
+            </li>
+        
+        
+            <li class="next">
+                <a href= "/2017/09/11/JS实现-EasyUI-Tree-数据格式转换/" title= JS实现 EasyUI-Tree 数据格式转换 >
+                    <span>Next Post</span>
+                    <span>JS实现 EasyUI-Tree 数据格式转换</span>
+                </a>
+            </li>
+        
+    </ul>
+    <!-- 来必力City版安装代码 -->
+
     
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2016/09/06/HEXO-github-搭建属于自己的博客/" >
-                    <h2 class="abstract-title">
-                        
-                        <span>HEXO+github,搭建属于自己的博客</span>
-                    </h2>
-                <div class="abstract-content">
-                    hexo是一款基于Node.js的静态博客框架,hexo github链接,这篇教程是针对与Mac的.之前是想着写博客，一方面是给自己做笔记，可以提升自己的写作、总结能力，一个技术点我们会使用，并不难，但是要做到让让别人也能听懂我们讲得，还是需要一定的技巧和经验的。很多类似于CSDN、博客园也都可以写文章，但是页面的样式我，不是太喜欢，简书还算好点得。最近看到一些大神们的博客,貌似都是用hexo写得,我也依葫芦画瓢的搭建了一个。不罗嗦了，直接上搭建步骤。
-配置环境安装Node（必须）作用：用来生成静态页面的到Node.js官网下载相应平台的最新版本，一路安装即可。
-安装Git（必须）作用...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2016/09/06</span>
-                </div>
-            </div>
-        </article>
-    
-    <!-- paginator  -->
-    
+
+<!-- City版安装代码已完成 -->
 </main>
             <!-- profile -->
             
