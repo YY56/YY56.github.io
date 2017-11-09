@@ -142,7 +142,7 @@
 <p>版权声明：本文为博主原创文章，未经博主允许不得转载。</p>
 </blockquote>
 <p>由于需要深圳某一点周边的学校，医院，消防的经纬度数据，有麻烦的办法，就是利用百度地图的拾取坐标系统去一个一个找出来，点击复制，过程是很繁琐的，而且也经常会忘记你点过哪里了。所以，去看了周边搜索的API，功夫不负有心人，可是在控制台打印出来想要的数据了</p>
-<p><a href="http://lbsyun.baidu.com/jsdemo.htm#i3_2" target="_blank" rel="external">百度地图周边搜索APIdemo</a>需要在这个demo上操作，就不需要去申请秘钥了。<br>打开页面是这样的：<br><img src="https://raw.githubusercontent.com/YY56/YY56.github.io/master/images/baiduAPI-1.jpg" alt="images"></p>
+<p><a href="http://lbsyun.baidu.com/jsdemo.htm#i3_2" target="_blank" rel="external">百度地图周边搜索APIdemo</a><br>需要在这个demo上操作，不需要去申请秘钥，可是省了大半会儿的时间。<br>打开页面是这样的：<br><img src="https://raw.githubusercontent.com/YY56/YY56.github.io/master/images/baiduAPI-1.jpg" alt="images"></p>
 <p>把源代码编辑器的JavaScript代码替换成，如下：</p>
 <pre><code>// 百度地图API功能
 var map = new BMap.Map(&quot;allmap&quot;);            // 创建Map实例
@@ -154,10 +154,12 @@ var circle = new BMap.Circle(mPoint,5000,{fillColor:&quot;blue&quot;, strokeWeig
 map.addOverlay(circle);
 var local =  new BMap.LocalSearch(map, {renderOptions: {map: map},onSearchComplete: function(results){console.log(results)}});  
 local.searchNearby(&apos;学校&apos;,mPoint,5000);
-</code></pre><p>然后点击运行</p>
+</code></pre><p>然后点击右上角的运行按钮</p>
 <p><img src="https://raw.githubusercontent.com/YY56/YY56.github.io/master/images/baiduAPI-2.jpg" alt="images"></p>
 <p>就搜索出要的定位点了，可是我们要的是经纬度呀，别急，f12 打开控制台，就可以看到有json数据输出<br><img src="https://raw.githubusercontent.com/YY56/YY56.github.io/master/images/baiduAPI-3.jpg" alt="images"></p>
-
+<p>在上面的代码中，<br>学校是关键字<br>mPoint是定位的中心点<br>5000是搜索的范围<br>可根据具体的要求进行更改</p>
+<pre><code>local.searchNearby(&apos;学校&apos;,mPoint,5000);
+</code></pre>
     </article>
     <!-- 前后页  -->
     <ul class="post-pager">
@@ -224,16 +226,6 @@ local.searchNearby(&apos;学校&apos;,mPoint,5000);
     <div class="sidebar-content sidebar-content-show-archive">
           <div class="sidebar-archive">
     <!-- 在ejs中将archive按照时间排序 -->
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     
