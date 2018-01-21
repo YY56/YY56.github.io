@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
     <title>
         
-        离开岛的鱼
+        Less 之快速入门 · 离开岛的鱼
         
     </title>
     <link rel="icon" href= /favicon.ico>
@@ -68,13 +68,22 @@
     
 </head>
     
-        <body class="four-zero-four-body">
+        <body class="post-body">
     
     
 <header class="header">
 
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/" >离开岛的鱼</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">Less 之快速入门</a>
+            </div>
+    </div>
     
     <a class="home-link" href=/>离开岛的鱼</a>
 </header>
@@ -84,149 +93,221 @@
     <!-- 主页  -->
     
     
+    <!-- 404页  -->
     
-    <div class="site-intro-img" style="background-image: url(http://oumn0o088.bkt.clouddn.com/404.jpg)"></div>
+    <div class="site-intro-img" style="background-image: url(http://oumn0o088.bkt.clouddn.com/post-bg.jpg)"></div>
     <div class="site-intro-placeholder"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            [404]
+            Less 之快速入门
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
-            <p class="intro-subtitle"> </p>
+            
+        </p>
+        <!-- 404 -->
         
         <!-- 文章页meta -->
+        
+            <!-- 文章页标签  -->
+            
+            <div class="post-intro-meta">
+                <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                <span class="post-intro-time">2017/08/20</span>
+            </div>
+            <!-- 
+
+<div class="post-share iconfont-archer">
+    <ul class="share-box" data-href = "/2017/08/20/Less-之快速入门/" data-title = "Less 之快速入门" >
+        <li class="to-weibo">分享到微博</li>
+        <li class="to-wechat">分享到微信</li>
+        <li class="to-qq">分享到QQ</li>
+        <li class="to-twitter">分享到twitter</li>
+    </ul>
+</div> -->
         
     </div>
 </div>
         <div class="container">
-            <main class="main index-page">
-    
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2017/08/30/Js-引擎的LHS、RHS查询/" >
-                    <h2 class="abstract-title">
-                        
-                        <span>Js 引擎的LHS、RHS查询</span>
-                    </h2>
-                <div class="abstract-content">
-                    
-版权声明：本文为博主原创文章，未经博主允许不得转载。
-
-在写 js 代码的时，编译器在编译的时候生成了代码，引擎执行它时，会通过查找变量 a 来判断它是否已经声明过。查找的过程中需要通过作用域来协助，这时候引擎会为变量 a 进行 LHS 查询，另一种查询类型是 RHS 查询。及当变量出现在 “=” 的左侧的时进行 LHS 查询，出现在右侧时进行  RHS 查询。讲的更好理解一点，LHS 查询出来的是变量的地址，而 RHS 查询出来的是变量存储的值。
-function foo(a){
-    console.log(a)
-}
-foo(2)
-让我们把上面的代码处理成一段对话，来让我更加容易...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2017/08/30</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2017/08/20/Less-之快速入门/" >
-                    <h2 class="abstract-title">
-                        
-                        <span>Less 之快速入门</span>
-                    </h2>
-                <div class="abstract-content">
-                    
-版权声明：本文为博主原创文章，未经博主允许不得转载。
-
-Less 是一种动态样式语言，它将CSS赋予了动态语言的特性。如：变量，继承，运算，函数。LESS 既可以在客户端上运行(支持IE 6+,Webkit,Firefox)，也可以借助Node.js或者Rhino在服务端运行。
-Ps:  Less需要编译，才能转成CSS文件，上一篇文章详细介绍了 我个人比较常用的快速的编译的方法，希望对小伙伴们有所帮助。
-#注释Less
-// 注释（该注释不会被编译到CSS文件里面）
+            <main class="main post-page">
+    <article class="article-entry">
+        <blockquote>
+<p>版权声明：本文为博主原创文章，未经博主允许不得转载。</p>
+</blockquote>
+<p><font color="#0099ff" size="30">Less </font><br>是一种动态样式语言，它将CSS赋予了动态语言的特性。如：变量，继承，运算，函数。LESS 既可以在客户端上运行(支持IE 6+,Webkit,Firefox)，也可以借助Node.js或者Rhino在服务端运行。</p>
+<p><strong>Ps:</strong>  Less需要编译，才能转成CSS文件，上一篇文章详细介绍了 我个人比较常用的快速的编译的方法，希望对小伙伴们有所帮助。</p>
+<p><font color="#0099ff"><strong>#注释</strong></font><br>Less</p>
+<pre><code>// 注释（该注释不会被编译到CSS文件里面）
 /*注释（该注释会被编译到CSS文件里面）*/
-Less 编译完成的CSS
-/*注释（该注释会被编译到CSS文件里面）...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2017/08/20</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2017/08/15/Less自动编译成css的简单快速的方法/" >
-                    <h2 class="abstract-title">
-                        
-                        <span>Less自动编译成css的简单快速的方法</span>
-                    </h2>
-                <div class="abstract-content">
-                    
-版权声明：本文为博主原创文章，未经博主允许不得转载。
+</code></pre><p>Less 编译完成的CSS</p>
+<pre><code>/*注释（该注释会被编译到CSS文件里面）*/
+</code></pre><p><font color="#0099ff"><strong>#变量</strong></font><br>Less</p>
+<pre><code>// 变量的声明
+@wine_red : #900;
+.box{
+    background-color: @wine_red;
+}
+</code></pre><p>Less 编译完成的CSS</p>
+<pre><code>.box{
+    background-color: #900;
+}
+</code></pre><p><font color="#0099ff"><strong>#混合</strong></font><br>Less</p>
+<pre><code>// 变量的声明
+@wine_red : #900;
+.box{
+    background-color: @wine_red;
+    .box_1;
+    .box_2(5px);
+    .box_3(#09f);
+}
+// 混合
+.box_1(){
+    width: 200px;
+    height: 200px;
+}
 
-我之前最先学习less的时候用的是koala进行编译，它既可以编译less也可以编译sass，使用起来也是比较方便的，但是需要下载工具，简单配置一下即可使用。这里我说的不是这个方法，感兴趣的可以去看看。还有一些其他的方法，比如用vue的开发，使用webpack配置。Less 还和流行的 Grunt 构建工具进行了集成，可以参考 grunt-contrib-less 插件。
-现在我来说我最近比较经常用的方法：
-使用sublime text的less2css插件
-步骤：
+// 带参数的混合
+.box_2(@radius) {
+    border-radius: @radius;
+}
 
-需要安装node.js,这个到官网下载即可
-需安装less，在...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2017/08/15</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2017/08/14/vue之常用的插件安装/" >
-                    <h2 class="abstract-title">
-                        
-                        <span>vue之常用的插件安装</span>
-                    </h2>
-                <div class="abstract-content">
-                    
-版权声明：本文为博主原创文章，未经博主允许不得转载。
+// 带默认参数的混合 
+.box_3(@color, @border: 6px) {
+    border: @border solid @color;
+}
+</code></pre><p>Less 编译完成的CSS</p>
+<pre><code>.box{
+    background-color: #900;
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+    border: 6px solid #09f;
+}
+</code></pre><p><font color="#0099ff"><strong>#匹配模式</strong></font><br>Less</p>
+<pre><code>.angle{
+    .triangle(top)
+}
 
+// 匹配模式
+.triangle(@_, @w:10px, @c:#ccc) {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+.triangle(top, @w:10px, @c:#ccc) {
+    border-width: @w;
+    border-style: dashed dashed solid dashed;
+    border-color: transparent transparent @c transparent;
+}
+.triangle(right,@w:10px, @c:#ccc) {
+    border-width: @w;
+    border-style: dashed dashed dashed solid;
+    border-color: transparent transparent transparent @c;
+}
+.triangle(bottom,@w:10px, @c:#ccc) {
+    border-width: @w;
+    border-style: solid dashed dashed dashed;
+    border-color: @c transparent transparent transparent;
+}
+.triangle(left,@w:10px, @c:#ccc) {
+    border-width: @w;
+    border-style: dashed solid dashed dashed;
+    border-color: transparent @c transparent transparent;
+}
+</code></pre><p>Less 编译完成的CSS</p>
+<pre><code>.angle {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    border-width: 10px;
+    border-style: dashed dashed solid dashed;
+    border-color: transparent transparent #ccc transparent;
+}
+</code></pre><p><font color="#0099ff"><strong>#运算</strong></font><br>Less</p>
+<pre><code>.box{
+    .box_4()
+}
 
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2017/08/14</span>
-                </div>
-            </div>
-        </article>
+// 运算
+.box_4(){
+    width: 200px - 20;
+}
+</code></pre><p>Less 编译完成的CSS</p>
+<pre><code>.box {
+    width: 180px;
+}
+</code></pre><p><font color="#0099ff"><strong>#嵌套</strong></font><br>Less    </p>
+<pre><code>// 嵌套
+nav{
+    ul{
+        padding-left: 0;
+        font-size: 0;
+        li{
+            display: inline-block;
+            width: 40px;
+            height: 20px;
+            background-color: #900;
+            margin-left: 4px;
+            &amp;.item{
+                background-color: #098;
+            }
+            &amp;:hover{
+                background-color: #222;
+            }
+        }
+    }
+}
+</code></pre><p>Less 编译完成的CSS    </p>
+<pre><code>nav ul {
+    padding-left: 0;
+    font-size: 0;
+    }
+nav ul li {
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    background-color: #900;
+    margin-left: 4px;
+}
+nav ul li.item {
+    background-color: #098;
+}
+nav ul li:hover {
+    background-color: #222;
+}
+</code></pre>
+    </article>
+    <!-- 前后页  -->
+    <ul class="post-pager">
+        
+            <li class="previous">
+                <a href= "/2017/08/30/Js-引擎的LHS、RHS查询/" title= Js 引擎的LHS、RHS查询 >
+                    <span>Previous Post</span>
+                    <span>Js 引擎的LHS、RHS查询</span>
+                </a>
+            </li>
+        
+        
+            <li class="next">
+                <a href= "/2017/08/15/Less自动编译成css的简单快速的方法/" title= Less自动编译成css的简单快速的方法 >
+                    <span>Next Post</span>
+                    <span>Less自动编译成css的简单快速的方法</span>
+                </a>
+            </li>
+        
+    </ul>
+    <!-- 来必力City版安装代码 -->
+
     
-    <!-- paginator  -->
-    
+
+<!-- City版安装代码已完成 -->
 </main>
             <!-- profile -->
             
