@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
     <title>
         
-        离开岛的鱼
+        webpack笔记 · 离开岛的鱼
         
     </title>
     <link rel="icon" href= /favicon.ico>
@@ -68,13 +68,22 @@
     
 </head>
     
-        <body class="home-body">
+        <body class="post-body">
     
     
-<header class="header index-header">
+<header class="header">
 
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/" >离开岛的鱼</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">webpack笔记</a>
+            </div>
+    </div>
     
     <a class="home-link" href=/>离开岛的鱼</a>
 </header>
@@ -84,17 +93,17 @@
     <!-- 主页  -->
     
     
-    <!-- 文章页  -->
+    <!-- 404页  -->
     
-    <div class="site-intro-img" style="background-image: url(http://oumn0o088.bkt.clouddn.com/intro-desktop.jpg)"></div>
+    <div class="site-intro-img" style="background-image: url(http://oumn0o088.bkt.clouddn.com/post-bg.jpg)"></div>
     <div class="site-intro-placeholder"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            离开岛的鱼
-            <!-- 文章页  -->
+            webpack笔记
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
@@ -102,257 +111,78 @@
             <!-- 主页副标题  -->
             
             
-                it's better to burn out than to fade away
-            
-            <!-- 文章页  -->
-            
+        </p>
+        <!-- 404 -->
+        
         <!-- 文章页meta -->
+        
+            <!-- 文章页标签  -->
+            
+            <div class="post-intro-meta">
+                <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                <span class="post-intro-time">2018/01/10</span>
+            </div>
+            <!-- 
+
+<div class="post-share iconfont-archer">
+    <ul class="share-box" data-href = "/2018/01/10/webpack笔记/" data-title = "webpack笔记" >
+        <li class="to-weibo">分享到微博</li>
+        <li class="to-wechat">分享到微信</li>
+        <li class="to-qq">分享到QQ</li>
+        <li class="to-twitter">分享到twitter</li>
+    </ul>
+</div> -->
         
     </div>
 </div>
         <div class="container">
-            <main class="main index-page">
-    
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2017/08/14/vue之常用的插件安装/" >
-                    <h2 class="abstract-title">
-                        
-                        <span>vue之常用的插件安装</span>
-                    </h2>
-                <div class="abstract-content">
-                    
-版权声明：本文为博主原创文章，未经博主允许不得转载。
+            <main class="main post-page">
+    <article class="article-entry">
+        <blockquote>
+<p>版权声明：本文为博主原创文章，未经博主允许不得转载。</p>
+</blockquote>
+<h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><p>本质上，<strong>webpack</strong> 是一个现代 JavaScript 应用程序的静态模块打包器。由于 <strong>webpack</strong> 不支持以.js意外的文件，loader 可以将所有类型的文件转换为 <strong>webpack</strong> 能够处理的有效模块，然后你就可以利用 webpack 的打包能力，对它们进行处理。plugin用于扩展了 <strong>webpack</strong> 的功能，插件的范围包括，从打包优化和压缩，一直到重新定义环境中的变量。 </p>
+<h2 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h2><ul>
+<li>依赖管理：让模块更容易的被复用，避免全局引入的冲突，避免重复导入或加载不需要的模块</li>
+<li>合并代码：把各个分散的模块打包成一个文件，减少HTTP的请求数量</li>
+<li>文件压缩：代码和图片压缩减少体积，字节数小的图片文件可被编译成base64直接插入文件中</li>
+<li>各路插件：babel插件将ES6转译成ES5 </li>
+</ul>
+<h2 id="构建的过程"><a href="#构建的过程" class="headerlink" title="构建的过程"></a>构建的过程</h2><ul>
+<li>解析配置参数：合并shell和webpack.config.js文件中的配置信息，输出最终的配置信息</li>
+<li>注册配置插件：好让插件监听<strong>webpack</strong>生命周期的事件节点，做出对应的反应</li>
+<li>解析entry入口：找出每个文件中所有的文件，从而递归下去</li>
+<li>loader解析：在递归的每个文件中，找出对应的loader进行解析。递归结束后，得到最终的chunk</li>
+<li>chunk输出：输出chunk到文件系统</li>
+</ul>
 
-创建Vue项目模版
+    </article>
+    <!-- 前后页  -->
+    <ul class="post-pager">
+        
+            <li class="previous">
+                <a href= "/2018/01/16/ES6-学习笔记/" title= ES6 学习笔记 >
+                    <span>Previous Post</span>
+                    <span>ES6 学习笔记</span>
+                </a>
+            </li>
+        
+        
+            <li class="next">
+                <a href= "/2017/11/01/利用百度地图API，不需要秘钥即可找出周边的标记点的经纬度/" title= 利用百度地图API，不需要秘钥即可找出周边的标记点的经纬度 >
+                    <span>Next Post</span>
+                    <span>利用百度地图API，不需要秘钥即可找出周边的标记点的经纬度</span>
+                </a>
+            </li>
+        
+    </ul>
+    <!-- 来必力City版安装代码 -->
 
-创建一个基于 webpack 模板的新项目
-$ vue init webpack my-project
-进入文件夹
-$ cd my-project
-安装依赖，走你
-$ npm install
-启动项目
-$ npm run dev
-安装项目中所需要的插件
+    
 
-安装less及less-loader 解析css
-$ npm install less less-loader --save
-
-在.vue文件中使用
-&lt;style lang=&quot;less&quot;&gt;&lt;/style&gt;
-安装vu...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2017/08/14</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2017/02/01/如何使用命令行快速打开sublime编辑器/" >
-                    <h2 class="abstract-title">
-                        
-                        <span>如何使用命令行快速打开sublime编辑器</span>
-                    </h2>
-                <div class="abstract-content">
-                    
-版权声明：本文为博主原创文章，未经博主允许不得转载。
-
-建立软链：（如果是 sublime Text 2）
-sudo ln -s /Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl /usr/local/bin/sublime
-建立软链：（如果是 sublime Text）
-sudo ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/sublime
-然后就可以用sublime命令打开文件...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2017/02/01</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2017/01/04/putingithub/" >
-                    <h2 class="abstract-title">
-                        
-                        <span>上传到github仓库，并在线浏览网页</span>
-                    </h2>
-                <div class="abstract-content">
-                    
-版权声明：本文为博主原创文章，未经博主允许不得转载。
-
-第一步：首先准备好你需要上传的文件夹，里面有你写好的html、js和css文件等在账号下创建一个仓库，名字为into来到你的目录下
-此时已经进入文件夹，输入
-git add index.html
-
-git add style.css
-
-git add render.js
-
-git commit -m &quot;first commit&quot;
-
-git remote add origin git@github.com:yourname/intro.
-
-git git push -u origin master
-之后显示
-Co...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2017/01/04</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2016/10/19/ajax/" >
-                    <h2 class="abstract-title">
-                        
-                        <span>ajax</span>
-                    </h2>
-                <div class="abstract-content">
-                    
-版权声明：本文为博主原创文章，未经博主允许不得转载。
-
-在学习之前，您需要对下面的知识有基本的了解：HTML / XHTMLCSSJavaScript / DOM
-什么是 AJAX ？AJAX = 异步 JavaScript 和 XML。AJAX 是一种用于创建快速动态网页的技术。通过在后台与服务器进行少量数据交换，AJAX 可以使网页实现异步更新。这意味着可以在不重新加载整个网页的情况下，对网页的某部分进行更新。传统的网页（不使用 AJAX）如果需要更新内容，必需重载整个网页面。有很多使用 AJAX 的应用程序案例：新浪微博、Google 地图、开心网等等。
-创建 XMLHttpRe...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2016/10/19</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2016/09/10/React入门/" >
-                    <h2 class="abstract-title">
-                        
-                        <span>React入门</span>
-                    </h2>
-                <div class="abstract-content">
-                    前置知识1.JS，CSS基础2.Sass，Compass3.Yeoman，Grunt，Webpack4.CommonJS，NodeJS5.Git，Github
-JSXJSX字面上的意思就是javascript和xml，是facebook为react 框架开发的一套语法糖。｛解析js的表达式｝需要解析库解析，最终被解析成JS。type为text/jsx。
-html只有个根元素，div id=”container”。
-css声明类名改为className，内联样式style＝｛｛color：‘red’｝｝。
-
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2016/09/10</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2016/09/06/HEXO-github-搭建属于自己的博客/" >
-                    <h2 class="abstract-title">
-                        
-                        <span>HEXO+github,搭建属于自己的博客</span>
-                    </h2>
-                <div class="abstract-content">
-                    hexo是一款基于Node.js的静态博客框架,hexo github链接,这篇教程是针对与Mac的.之前是想着写博客，一方面是给自己做笔记，可以提升自己的写作、总结能力，一个技术点我们会使用，并不难，但是要做到让让别人也能听懂我们讲得，还是需要一定的技巧和经验的。很多类似于CSDN、博客园也都可以写文章，但是页面的样式我，不是太喜欢，简书还算好点得。最近看到一些大神们的博客,貌似都是用hexo写得,我也依葫芦画瓢的搭建了一个。不罗嗦了，直接上搭建步骤。
-配置环境安装Node（必须）作用：用来生成静态页面的到Node.js官网下载相应平台的最新版本，一路安装即可。
-安装Git（必须）作用...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2016/09/06</span>
-                </div>
-            </div>
-        </article>
-    
-    <!-- paginator  -->
-    
-    <nav class="page-nav">
-        <a class="extend prev" rel="prev" href="/">#PREV</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
-    </nav>
-    
+<!-- City版安装代码已完成 -->
 </main>
             <!-- profile -->
-            
-            <div class="profile">
-    <img class="profile-avatar" src= /avatar/kumamon.jpg >
-    <div class="profile-name">离开岛的鱼</div>
-    
-    <div class="profile-signature">
-        witness me
-    </div>
-    
-    
-    <div class="profile-social">
-        
-    
-        
-            
-                <a href="emailto:mover56@126.com" class="iconfont-archer email" title=email ></a>
-            
-        
-    
-        
-            
-                <a href="//github.com/YY56" class="iconfont-archer github" target="_blank" title="github"></a>
-            
-        
-    
-        
-    
-
-    </div>
-    
-    
-        <div class="friends">
-            <div>FRIENDS</div>
-            
-                <span>
-                    <a href= //www.baidu.com target="_black">friendA</a>
-                </span>
-            
-                <span>
-                    <a href= //www.google.com target="_black">friendB</a>
-                </span>
-            
-        </div>
-    
-</div>
             
         </div>
         <footer class="footer">
